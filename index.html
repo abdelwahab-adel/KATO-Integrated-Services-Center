@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATO - كاتو | مركز خدمة متكامل للصيانة والتشطيبات</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- IMPROVEMENT: Distinctive font pairing — Syne (display) + DM Sans (body) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <button class="lang-toggle" onclick="toggleLanguage()">
+        <span class="ar-text">English</span>
+        <span class="en-text" style="display:none;">العربية</span>
+    </button>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="img/logo.jpeg" alt="KATO Logo">
+                <div class="logo-text">
+                    <span class="brand">KATO</span>
+                    <span class="tagline ar-text">صيانة لكل بيت</span>
+                    <span class="tagline en-text" style="display:none;">Maintenance For Every Home</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#services" class="ar-text">خدماتنا</a><a href="#services" class="en-text" style="display:none;">Our Services</a></li>
+                <li><a href="#about" class="ar-text">من نحن</a><a href="#about" class="en-text" style="display:none;">About Us</a></li>
+                <li><a href="#workflow" class="ar-text">طريقة العمل</a><a href="#workflow" class="en-text" style="display:none;">How We Work</a></li>
+                <li><a href="#gallery" class="ar-text">أعمالنا</a><a href="#gallery" class="en-text" style="display:none;">Our Work</a></li>
+                <li><a href="#contact" class="btn btn-primary ar-text">احجز الآن</a><a href="#contact" class="btn btn-primary en-text" style="display:none;">Book Now</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="ar-text">مركز KATO للخدمات المتكاملة</h1>
+                <h1 class="en-text" style="display:none;">KATO Integrated Services Center</h1>
+                
+                <p class="subtitle ar-text">صيانة • كهرباء • سباكة • تشطيبات</p>
+                <p class="subtitle en-text" style="display:none;">Maintenance • Electrical • Plumbing • Finishing</p>
+                
+                <p class="description ar-text">
+                    نوفر حلول صيانة وتشطيبات متكاملة للمنازل والمحلات التجارية والمصانع. فريق فني محترف متاح على مدار الساعة لتقديم أفضل خدمة بأعلى جودة.
+                </p>
+                <p class="description en-text" style="display:none;">
+                    We provide comprehensive maintenance and finishing solutions for homes, commercial shops, and factories. Professional technical team available 24/7 to deliver the best service with highest quality.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="tel:01028644675" class="btn btn-primary">
+                        <span class="ar-text">📞 اتصل الآن: 01028644675</span>
+                        <span class="en-text" style="display:none;">📞 Call Now: 01028644675</span>
+                    </a>
+                    <a href="https://wa.me/201028644675" class="btn btn-outline">
+                        <span class="ar-text">💬 واتساب</span>
+                        <span class="en-text" style="display:none;">💬 WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label ar-text">عميل راضي</div>
+                        <div class="stat-label en-text" style="display:none;">Happy Clients</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label ar-text">خدمة متواصلة</div>
+                        <div class="stat-label en-text" style="display:none;">Available Support</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label ar-text">سنوات خبرة</div>
+                        <div class="stat-label en-text" style="display:none;">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label ar-text">ضمان الجودة</div>
+                        <div class="stat-label en-text" style="display:none;">Quality Guarantee</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title ar-text">خدماتنا المتكاملة</h2>
+            <h2 class="section-title en-text" style="display:none;">Our Comprehensive Services</h2>
+            
+            <p class="section-subtitle ar-text">نقدم مجموعة شاملة من الخدمات لتلبية جميع احتياجاتك في الصيانة والتشطيبات</p>
+            <p class="section-subtitle en-text" style="display:none;">We offer a comprehensive range of services to meet all your maintenance and finishing needs</p>
+
+            <div class="services-grid">
+                <!-- Home Services -->
+                <div class="service-category" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <h3>
+                            <span class="service-icon">🏠</span>
+                            <span class="ar-text">الخدمات المنزلية</span>
+                            <span class="en-text" style="display:none;">Home Services</span>
+                        </h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h4 class="ar-text">صيانة الغسالات</h4>
+                                <h4 class="en-text" style="display:none;">Washing Machine Repair</h4>
+                                <ul class="ar-text">
+                                    <li>جميع الأنواع والماركات (ZANUSSI, FRESH, Beko, LG, SHARP, ATA, Samsung, Toshiba, Unionaire, White Point)</li>
+                                    <li>أعطال الموتور والمضخة</li>
+                                    <li>إصلاح الدوائر الإلكترونية</li>
+                                    <li>استبدال القطع التالفة</li>
+                                    <li>صيانة الباب والمفصلات</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>All types and brands</li>
+                                    <li>Motor and pump failures</li>
+                                    <li>Electronic circuit repair</li>
+                                    <li>Damaged parts replacement</li>
+                                    <li>Door & hinge maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="service-item">
+                                <h4 class="ar-text">صيانة التكييفات</h4>
+                                <h4 class="en-text" style="display:none;">Air Conditioning Service</h4>
+                                <ul class="ar-text">
+                                    <li>تنظيف وصيانة دورية</li>
+                                    <li>إصلاح جميع الأعطال</li>
+                                    <li>شحن الفريون</li>
+                                    <li>تركيب وحدات جديدة</li>
+                                    <li>فحص وإصلاح التسريبات</li>
+                                    <li>صيانة الكمبروسر</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Cleaning and periodic maintenance</li>
+                                    <li>Repair all malfunctions</li>
+                                    <li>Freon recharge</li>
+                                    <li>New unit installation</li>
+                                    <li>Leak detection & repair</li>
+                                    <li>Compressor maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="service-item">
+                                <h4 class="ar-text">صيانة الثلاجات والديب فريزر</h4>
+                                <h4 class="en-text" style="display:none;">Refrigerator & Deep Freezer Repair</h4>
+                                <ul class="ar-text">
+                                    <li>إصلاح الثرموستات</li>
+                                    <li>تغيير الكمبروسر</li>
+                                    <li>معالجة التسريب</li>
+                                    <li>إصلاح نظام التبريد</li>
+                                    <li>جميع الماركات العالمية</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Thermostat repair</li>
+                                    <li>Compressor replacement</li>
+                                    <li>Leak treatment</li>
+                                    <li>Cooling system repair</li>
+                                    <li>All international brands</li>
+                                </ul>
+                            </div>
+                            <div class="service-item">
+                                <h4 class="ar-text">صيانة فلاتر المياه</h4>
+                                <h4 class="en-text" style="display:none;">Water Filter Service</h4>
+                                <ul class="ar-text">
+                                    <li>تغيير الشمعات</li>
+                                    <li>صيانة الممبرين</li>
+                                    <li>تركيب فلاتر جديدة</li>
+                                    <li>جميع الأنواع (7 مراحل، RO، UV)</li>
+                                    <li>فحص جودة المياه</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Filter cartridge replacement</li>
+                                    <li>Membrane maintenance</li>
+                                    <li>New filter installation</li>
+                                    <li>All types (7-stage, RO, UV)</li>
+                                    <li>Water quality testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electrical Department -->
+                <div class="service-category" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <h3>
+                            <span class="service-icon">⚡</span>
+                            <span class="ar-text">قسم الكهرباء</span>
+                            <span class="en-text" style="display:none;">Electrical Department</span>
+                        </h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h4 class="ar-text">التأسيس الكهربائي</h4>
+                                <h4 class="en-text" style="display:none;">Electrical Installation</h4>
+                                <ul class="ar-text">
+                                    <li>تخطيط وتصميم الشبكة الكهربائية</li>
+                                    <li>تمديد الكابلات والأسلاك</li>
+                                    <li>تركيب اللوحات الرئيسية والفرعية</li>
+                                    <li>توزيع نقاط الكهرباء</li>
+                                    <li>تأسيس خطوط التغذية</li>
+                                    <li>تركيب القواطع والحمايات</li>
+                                    <li>التأريض وأنظمة الحماية</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Electrical network planning & design</li>
+                                    <li>Cable and wire laying</li>
+                                    <li>Main and sub-panel installation</li>
+                                    <li>Power point distribution</li>
+                                    <li>Feed line installation</li>
+                                    <li>Circuit breakers & protection setup</li>
+                                    <li>Grounding & protection systems</li>
+                                </ul>
+                            </div>
+                            <div class="service-item">
+                                <h4 class="ar-text">التشطيب الكهربائي</h4>
+                                <h4 class="en-text" style="display:none;">Electrical Finishing</h4>
+                                <ul class="ar-text">
+                                    <li>تركيب الإضاءة (لمبات، سبوتات، كشافات)</li>
+                                    <li>تركيب المفاتيح والأفياش</li>
+                                    <li>توصيل الأجهزة الكهربائية</li>
+                                    <li>تركيب الثريات والنجف</li>
+                                    <li>إضاءة ديكورية ومخفية</li>
+                                    <li>أنظمة الإنارة الذكية</li>
+                                    <li>الفحص النهائي والتسليم</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Lighting installation (bulbs, spots, floodlights)</li>
+                                    <li>Switches & outlets installation</li>
+                                    <li>Electrical appliance connection</li>
+                                    <li>Chandelier installation</li>
+                                    <li>Decorative & hidden lighting</li>
+                                    <li>Smart lighting systems</li>
+                                    <li>Final inspection & delivery</li>
+                                </ul>
+                            </div>
+                            <div class="service-item">
+                                <h4 class="ar-text">الصيانة والإصلاح الكهربائي</h4>
+                                <h4 class="en-text" style="display:none;">Electrical Maintenance & Repair</h4>
+                                <ul class="ar-text">
+                                    <li>كشف وإصلاح الأعطال الكهربائية</li>
+                                    <li>تبديل القطع والمعدات التالفة</li>
+                                    <li>إصلاح الدوائر القصيرة</li>
+                                    <li>صيانة اللوحات الكهربائية</li>
+                                    <li>فحص وصيانة دورية</li>
+                                    <li>خدمة طوارئ 24/7</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Electrical fault detection & repair</li>
+                                    <li>Parts & equipment replacement</li>
+                                    <li>Short circuit repair</li>
+                                    <li>Electrical panel maintenance</li>
+                                    <li>Inspection & periodic maintenance</li>
+                                    <li>24/7 emergency service</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plumbing Department -->
+                <div class="service-category" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <h3>
+                            <span class="service-icon">🚰</span>
+                            <span class="ar-text">قسم السباكة</span>
+                            <span class="en-text" style="display:none;">Plumbing Department</span>
+                        </h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h4 class="ar-text">التأسيس السباكي</h4>
+                                <h4 class="en-text" style="display:none;">Plumbing Installation</h4>
+                                <ul class="ar-text">
+                                    <li>تأسيس شبكات المياه الساخنة والباردة</li>
+                                    <li>تأسيس شبكات الصرف الصحي</li>
+                                    <li>تمديد المواسير (PPR, PVC, نحاس)</li>
+                                    <li>تركيب المحابس الرئيسية</li>
+                                    <li>تركيب نقاط التغذية</li>
+                                    <li>اختبار الضغط والتسريب</li>
+                                    <li>عزل المواسير</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Hot & cold water network installation</li>
+                                    <li>Sewage system installation</li>
+                                    <li>Pipe extension (PPR, PVC, copper)</li>
+                                    <li>Main valve installation</li>
+                                    <li>Supply point installation</li>
+                                    <li>Pressure & leak testing</li>
+                                    <li>Pipe insulation</li>
+                                </ul>
+                            </div>
+                            <div class="service-item">
+                                <h4 class="ar-text">التشطيب السباكي</h4>
+                                <h4 class="en-text" style="display:none;">Plumbing Finishing</h4>
+                                <ul class="ar-text">
+                                    <li>تركيب الأدوات الصحية (أحواض، مراحيض، بيديهات)</li>
+                                    <li>تركيب الخلاطات والحنفيات</li>
+                                    <li>تركيب السخانات الكهربائية والغاز</li>
+                                    <li>تركيب أطقم الدش والبانيو</li>
+                                    <li>تركيب مضخات المياه</li>
+                                    <li>توصيل الغسالات والغسالات الأطباق</li>
+                                    <li>التشطيبات النهائية والفحص</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Sanitary ware installation (sinks, toilets, bidets)</li>
+                                    <li>Mixer & faucet installation</li>
+                                    <li>Electric & gas water heater setup</li>
+                                    <li>Shower & bathtub set installation</li>
+                                    <li>Water pump installation</li>
+                                    <li>Washer & dishwasher connection</li>
+                                    <li>Final finishing & inspection</li>
+                                </ul>
+                            </div>
+                            <div class="service-item">
+                                <h4 class="ar-text">الصيانة والإصلاح السباكي</h4>
+                                <h4 class="en-text" style="display:none;">Plumbing Maintenance & Repair</h4>
+                                <ul class="ar-text">
+                                    <li>كشف وإصلاح التسريبات</li>
+                                    <li>فتح انسدادات المجاري</li>
+                                    <li>صيانة وتنظيف الخزانات</li>
+                                    <li>إصلاح وتبديل الخلاطات</li>
+                                    <li>صيانة السخانات</li>
+                                    <li>استبدال المواسير التالفة</li>
+                                    <li>خدمة طوارئ سباكة</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Leak detection & repair</li>
+                                    <li>Drain unclogging</li>
+                                    <li>Tank maintenance & cleaning</li>
+                                    <li>Mixer repair & replacement</li>
+                                    <li>Water heater maintenance</li>
+                                    <li>Damaged pipe replacement</li>
+                                    <li>Plumbing emergency service</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial Services -->
+                <div class="service-category" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <h3>
+                            <span class="service-icon">🏢</span>
+                            <span class="ar-text">الخدمات التجارية</span>
+                            <span class="en-text" style="display:none;">Commercial Services</span>
+                        </h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-items">
+                            <!-- Factory Services -->
+                            <div class="service-item" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(30, 58, 95, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%); border: 2px solid var(--navy);">
+                                <h4 class="ar-text" style="font-size: 22px; color: var(--orange);">🏭 خدمات المصانع والشركات</h4>
+                                <h4 class="en-text" style="display:none; font-size: 22px; color: var(--orange);">🏭 Factory & Company Services</h4>
+                            </div>
+                            
+                            <div class="service-item">
+                                <h4 class="ar-text">اللوحات الكهربائية الصناعية</h4>
+                                <h4 class="en-text" style="display:none;">Industrial Electrical Panels</h4>
+                                <ul class="ar-text">
+                                    <li>لوحات التوزيع الرئيسية (MDB - Main Distribution Board)</li>
+                                    <li>لوحات التوزيع الفرعية (SDB - Sub Distribution Board)</li>
+                                    <li>لوحات التحكم (Control Panels)</li>
+                                    <li>لوحات الإنارة</li>
+                                    <li>لوحات المحركات (MCC - Motor Control Center)</li>
+                                    <li>لوحات الطوارئ والـ UPS</li>
+                                    <li>لوحات التوزيع للمولدات</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Main Distribution Boards (MDB)</li>
+                                    <li>Sub Distribution Boards (SDB)</li>
+                                    <li>Control Panels</li>
+                                    <li>Lighting Panels</li>
+                                    <li>Motor Control Centers (MCC)</li>
+                                    <li>Emergency & UPS Panels</li>
+                                    <li>Generator Distribution Panels</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">أنظمة PLC والتحكم الآلي</h4>
+                                <h4 class="en-text" style="display:none;">PLC & Automation Systems</h4>
+                                <ul class="ar-text">
+                                    <li>برمجة وتركيب PLC (Siemens, Allen Bradley, Mitsubishi, Delta)</li>
+                                    <li>أنظمة SCADA للمراقبة والتحكم</li>
+                                    <li>شاشات HMI Panels</li>
+                                    <li>أنظمة التحكم الموزع DCS</li>
+                                    <li>الأتمتة الصناعية الكاملة</li>
+                                    <li>أنظمة الحساسات والـ Sensors</li>
+                                    <li>Variable Frequency Drives (VFD)</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>PLC Programming & Installation</li>
+                                    <li>SCADA Monitoring & Control Systems</li>
+                                    <li>HMI Touch Panels</li>
+                                    <li>Distributed Control Systems (DCS)</li>
+                                    <li>Complete Industrial Automation</li>
+                                    <li>Sensor Systems</li>
+                                    <li>Variable Frequency Drives (VFD)</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">الكهرباء الصناعية</h4>
+                                <h4 class="en-text" style="display:none;">Industrial Electrical Work</h4>
+                                <ul class="ar-text">
+                                    <li>تركيب وصيانة المحولات الكهربائية</li>
+                                    <li>شبكات الجهد العالي والمنخفض</li>
+                                    <li>كابلات القوى والتحكم</li>
+                                    <li>Cable Trays & Trunking Systems</li>
+                                    <li>أنظمة التأريض الصناعية</li>
+                                    <li>محطات المحولات الفرعية</li>
+                                    <li>أنظمة الطاقة الشمسية للمصانع</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Transformer Installation & Maintenance</li>
+                                    <li>High & Low Voltage Networks</li>
+                                    <li>Power & Control Cables</li>
+                                    <li>Cable Trays & Trunking Systems</li>
+                                    <li>Industrial Grounding Systems</li>
+                                    <li>Substations</li>
+                                    <li>Solar Energy Systems for Factories</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">أنظمة مراقبة وحماية</h4>
+                                <h4 class="en-text" style="display:none;">Monitoring & Protection Systems</h4>
+                                <ul class="ar-text">
+                                    <li>أنظمة إنذار الحريق</li>
+                                    <li>كاميرات المراقبة الصناعية</li>
+                                    <li>أنظمة الدخول والخروج (Access Control)</li>
+                                    <li>شبكات الإنترنت والتليفونات</li>
+                                    <li>أنظمة الإنذار ضد السرقة</li>
+                                    <li>حماية الماكينات والمعدات</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Fire Alarm Systems</li>
+                                    <li>Industrial CCTV</li>
+                                    <li>Access Control Systems</li>
+                                    <li>Network & Telephone Systems</li>
+                                    <li>Anti-theft Alarm Systems</li>
+                                    <li>Machine & Equipment Protection</li>
+                                </ul>
+                            </div>
+
+                            <!-- Shop Services -->
+                            <div class="service-item" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(30, 58, 95, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%); border: 2px solid var(--navy); margin-top: 20px;">
+                                <h4 class="ar-text" style="font-size: 22px; color: var(--orange);">🏪 خدمات المحلات والورش التجارية</h4>
+                                <h4 class="en-text" style="display:none; font-size: 22px; color: var(--orange);">🏪 Shop & Commercial Workshop Services</h4>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">تجهيز المحلات التجارية</h4>
+                                <h4 class="en-text" style="display:none;">Commercial Shop Setup</h4>
+                                <ul class="ar-text">
+                                    <li>التخطيط الكهربائي للمحل</li>
+                                    <li>تصميم أنظمة الإضاءة التجارية</li>
+                                    <li>توزيع نقاط الكهرباء للمعدات</li>
+                                    <li>تركيب لوحات التوزيع</li>
+                                    <li>التأسيس السباكي للمحلات</li>
+                                    <li>تجهيز دورات المياه</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Electrical planning for shops</li>
+                                    <li>Commercial lighting design</li>
+                                    <li>Power point distribution for equipment</li>
+                                    <li>Distribution panel installation</li>
+                                    <li>Plumbing installation for shops</li>
+                                    <li>Restroom setup</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">الكهرباء التجارية</h4>
+                                <h4 class="en-text" style="display:none;">Commercial Electrical Work</h4>
+                                <ul class="ar-text">
+                                    <li>إضاءة الواجهات والمحلات</li>
+                                    <li>اللافتات والإعلانات المضيئة</li>
+                                    <li>تركيب أنظمة الكاشير والـ POS</li>
+                                    <li>كهرباء المطاعم والكافيهات</li>
+                                    <li>أنظمة التبريد والتكييف التجاري</li>
+                                    <li>الديكورات الكهربائية</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Storefront & shop lighting</li>
+                                    <li>Illuminated signs & advertisements</li>
+                                    <li>Cashier & POS system installation</li>
+                                    <li>Restaurant & cafe electrical work</li>
+                                    <li>Commercial cooling & AC systems</li>
+                                    <li>Electrical decorations</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">السباكة التجارية</h4>
+                                <h4 class="en-text" style="display:none;">Commercial Plumbing</h4>
+                                <ul class="ar-text">
+                                    <li>شبكات المياه للمطاعم</li>
+                                    <li>تركيب أحواض غسيل تجارية</li>
+                                    <li>شبكات صرف المطابخ التجارية</li>
+                                    <li>مصائد الدهون (Grease Traps)</li>
+                                    <li>سخانات المياه التجارية</li>
+                                    <li>صيانة دورية للمحلات</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Water networks for restaurants</li>
+                                    <li>Commercial sink installation</li>
+                                    <li>Commercial kitchen drainage</li>
+                                    <li>Grease Traps</li>
+                                    <li>Commercial water heaters</li>
+                                    <li>Periodic shop maintenance</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">خدمات إضافية</h4>
+                                <h4 class="en-text" style="display:none;">Additional Services</h4>
+                                <ul class="ar-text">
+                                    <li>تركيب أنظمة الأمان</li>
+                                    <li>كاميرات المراقبة</li>
+                                    <li>شبكات الإنترنت</li>
+                                    <li>أجهزة الإنذار</li>
+                                    <li>مكيفات مركزية تجارية</li>
+                                    <li>أنظمة التحكم والأتمتة البسيطة</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Security system installation</li>
+                                    <li>CCTV cameras</li>
+                                    <li>Internet networks</li>
+                                    <li>Alarm systems</li>
+                                    <li>Commercial central AC</li>
+                                    <li>Simple control & automation systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maintenance Contracts & Programs -->
+                <div class="service-category" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <h3>
+                            <span class="service-icon">📋</span>
+                            <span class="ar-text">برامج وعقود الصيانة</span>
+                            <span class="en-text" style="display:none;">Maintenance Contracts & Programs</span>
+                        </h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h4 class="ar-text">عقود الصيانة المنزلية</h4>
+                                <h4 class="en-text" style="display:none;">Home Maintenance Contracts</h4>
+                                <ul class="ar-text">
+                                    <li>صيانة دورية شهرية أو ربع سنوية</li>
+                                    <li>فحص شامل لجميع الأجهزة المنزلية</li>
+                                    <li>صيانة وقائية للكهرباء والسباكة</li>
+                                    <li>أولوية في الاستجابة للطوارئ</li>
+                                    <li>خصومات على قطع الغيار</li>
+                                    <li>تقرير دوري بحالة المنزل</li>
+                                    <li>خدمة عملاء مخصصة</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Monthly or quarterly periodic maintenance</li>
+                                    <li>Comprehensive home appliance inspection</li>
+                                    <li>Preventive electrical & plumbing maintenance</li>
+                                    <li>Emergency response priority</li>
+                                    <li>Spare parts discounts</li>
+                                    <li>Periodic home condition report</li>
+                                    <li>Dedicated customer service</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">عقود صيانة المحلات التجارية</h4>
+                                <h4 class="en-text" style="display:none;">Commercial Shop Maintenance Contracts</h4>
+                                <ul class="ar-text">
+                                    <li>جولات تفتيش منتظمة</li>
+                                    <li>صيانة وقائية للأنظمة الكهربائية</li>
+                                    <li>صيانة التكييفات والثلاجات التجارية</li>
+                                    <li>صيانة أنظمة الإضاءة</li>
+                                    <li>استجابة سريعة للأعطال</li>
+                                    <li>تقارير شهرية مفصلة</li>
+                                    <li>خدمة ليلية ونهارية</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Regular inspection rounds</li>
+                                    <li>Preventive electrical system maintenance</li>
+                                    <li>Commercial AC & refrigerator maintenance</li>
+                                    <li>Lighting system maintenance</li>
+                                    <li>Fast fault response</li>
+                                    <li>Detailed monthly reports</li>
+                                    <li>Day & night service</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">عقود صيانة المصانع والشركات</h4>
+                                <h4 class="en-text" style="display:none;">Factory & Company Maintenance Contracts</h4>
+                                <ul class="ar-text">
+                                    <li>عقود صيانة شاملة سنوية</li>
+                                    <li>فريق فني مخصص ومقيم (إن لزم)</li>
+                                    <li>صيانة وقائية مجدولة حسب الخطة</li>
+                                    <li>صيانة اللوحات وأنظمة PLC</li>
+                                    <li>صيانة المحولات والمولدات</li>
+                                    <li>دعم فني مستمر 24/7</li>
+                                    <li>تقارير تفصيلية شهرية وسنوية</li>
+                                    <li>توفير قطع الغيار الأصلية</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Comprehensive annual maintenance contracts</li>
+                                    <li>Dedicated technical team (on-site if needed)</li>
+                                    <li>Scheduled preventive maintenance</li>
+                                    <li>Panel & PLC system maintenance</li>
+                                    <li>Transformer & generator maintenance</li>
+                                    <li>Continuous 24/7 technical support</li>
+                                    <li>Detailed monthly & annual reports</li>
+                                    <li>Original spare parts supply</li>
+                                </ul>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="ar-text">عقود صيانة الورش</h4>
+                                <h4 class="en-text" style="display:none;">Workshop Maintenance Contracts</h4>
+                                <ul class="ar-text">
+                                    <li>صيانة المعدات الكهربائية</li>
+                                    <li>صيانة الماكينات والمحركات</li>
+                                    <li>صيانة أنظمة الإضاءة والتهوية</li>
+                                    <li>فحص دوري للسلامة</li>
+                                    <li>صيانة طارئة سريعة</li>
+                                    <li>تقارير حالة شهرية</li>
+                                    <li>خطط صيانة مرنة</li>
+                                </ul>
+                                <ul class="en-text" style="display:none;">
+                                    <li>Electrical equipment maintenance</li>
+                                    <li>Machine & motor maintenance</li>
+                                    <li>Lighting & ventilation system maintenance</li>
+                                    <li>Periodic safety inspection</li>
+                                    <li>Fast emergency maintenance</li>
+                                    <li>Monthly status reports</li>
+                                    <li>Flexible maintenance plans</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="ar-text">من نحن</h2>
+                    <h2 class="en-text" style="display:none;">About Us</h2>
+                    
+                    <p class="ar-text">
+                        KATO هو مركز خدمة متكامل متخصص في تقديم حلول الصيانة والتشطيبات للمنازل والمحلات التجارية والمصانع. نفخر بفريقنا الفني المحترف وخبرتنا الواسعة في المجال.
+                    </p>
+                    <p class="en-text" style="display:none;">
+                        KATO is a comprehensive service center specialized in providing maintenance and finishing solutions for homes, commercial shops, and factories. We pride ourselves on our professional technical team and extensive field experience.
+                    </p>
+                    
+                    <p class="ar-text">
+                        نلتزم بتقديم أعلى مستويات الجودة والاحترافية في كل مشروع نقوم به، مع ضمان رضا العملاء التام عن خدماتنا.
+                    </p>
+                    <p class="en-text" style="display:none;">
+                        We are committed to delivering the highest levels of quality and professionalism in every project we undertake, ensuring complete customer satisfaction with our services.
+                    </p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-text">
+                                <h4 class="ar-text">خدمة سريعة</h4>
+                                <h4 class="en-text" style="display:none;">Fast Service</h4>
+                                <p class="ar-text">استجابة فورية لطلباتكم في أي وقت</p>
+                                <p class="en-text" style="display:none;">Immediate response to your requests anytime</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🛡️</div>
+                            <div class="feature-text">
+                                <h4 class="ar-text">ضمان شامل</h4>
+                                <h4 class="en-text" style="display:none;">Full Warranty</h4>
+                                <p class="ar-text">نضمن جودة العمل والقطع المستخدمة</p>
+                                <p class="en-text" style="display:none;">We guarantee work quality and parts used</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">👨‍🔧</div>
+                            <div class="feature-text">
+                                <h4 class="ar-text">فنيون محترفون</h4>
+                                <h4 class="en-text" style="display:none;">Professional Technicians</h4>
+                                <p class="ar-text">فريق مدرب على أعلى مستوى</p>
+                                <p class="en-text" style="display:none;">Highly trained team</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💰</div>
+                            <div class="feature-text">
+                                <h4 class="ar-text">أسعار منافسة</h4>
+                                <h4 class="en-text" style="display:none;">Competitive Prices</h4>
+                                <p class="ar-text">جودة عالية بأفضل الأسعار</p>
+                                <p class="en-text" style="display:none;">High quality at best prices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="technician.jpg" alt="KATO Technician">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="workflow">
+        <div class="container">
+            <h2 class="section-title ar-text">طريقة عملنا</h2>
+            <h2 class="section-title en-text" style="display:none;">How We Work</h2>
+            
+            <p class="section-subtitle ar-text">نتبع منهجية واضحة لضمان رضاك التام</p>
+            <p class="section-subtitle en-text" style="display:none;">We follow a clear methodology to ensure your complete satisfaction</p>
+
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📞</div>
+                    <h4 class="ar-text">تواصل معنا</h4>
+                    <h4 class="en-text" style="display:none;">Contact Us</h4>
+                    <p class="ar-text">اتصل بنا عبر الهاتف أو واتساب</p>
+                    <p class="en-text" style="display:none;">Call us via phone or WhatsApp</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">📅</div>
+                    <h4 class="ar-text">تحديد الموعد</h4>
+                    <h4 class="en-text" style="display:none;">Schedule Appointment</h4>
+                    <p class="ar-text">نحدد موعد مناسب للمعاينة</p>
+                    <p class="en-text" style="display:none;">We schedule a convenient inspection time</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">🔍</div>
+                    <h4 class="ar-text">الفحص والتشخيص</h4>
+                    <h4 class="en-text" style="display:none;">Inspection & Diagnosis</h4>
+                    <p class="ar-text">الفني يفحص المشكلة ويحدد التكلفة</p>
+                    <p class="en-text" style="display:none;">Technician inspects and determines cost</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">🔧</div>
+                    <h4 class="ar-text">التنفيذ</h4>
+                    <h4 class="en-text" style="display:none;">Execution</h4>
+                    <p class="ar-text">نبدأ العمل فور موافقتك</p>
+                    <p class="en-text" style="display:none;">We start work upon your approval</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">✅</div>
+                    <h4 class="ar-text">التسليم والضمان</h4>
+                    <h4 class="en-text" style="display:none;">Delivery & Warranty</h4>
+                    <p class="ar-text">نسلم العمل مع ضمان شامل</p>
+                    <p class="en-text" style="display:none;">We deliver with full warranty</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title ar-text">من أعمالنا</h2>
+            <h2 class="section-title en-text" style="display:none;">Our Work</h2>
+            
+            <p class="section-subtitle ar-text">شاهد بعض المشاريع التي نفذناها بنجاح</p>
+            <p class="section-subtitle en-text" style="display:none;">View some projects we successfully completed</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="services-banner.jpg" alt="Work Sample">
+                    <div class="gallery-overlay">
+                        <p class="ar-text">أعمال كهرباء وتشطيبات</p>
+                        <p class="en-text" style="display:none;">Electrical & Finishing Work</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="electrical-work.jpg" alt="Work Sample">
+                    <div class="gallery-overlay">
+                        <p class="ar-text">تأسيس كهربائي متكامل</p>
+                        <p class="en-text" style="display:none;">Complete Electrical Installation</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600" alt="Work Sample">
+                    <div class="gallery-overlay">
+                        <p class="ar-text">صيانة أجهزة منزلية</p>
+                        <p class="en-text" style="display:none;">Home Appliance Maintenance</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600" alt="Work Sample">
+                    <div class="gallery-overlay">
+                        <p class="ar-text">أعمال سباكة احترافية</p>
+                        <p class="en-text" style="display:none;">Professional Plumbing Work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="contact" class="booking">
+        <div class="container">
+            <h2 class="section-title ar-text">احجز الآن</h2>
+            <h2 class="section-title en-text" style="display:none;">Book Now</h2>
+            
+            <p class="section-subtitle ar-text">اختر نوع الخدمة واحجز معاينة مجانية</p>
+            <p class="section-subtitle en-text" style="display:none;">Choose service type and book free inspection</p>
+
+            <div class="booking-tabs">
+                <button class="tab-btn active" onclick="switchTab(0)">
+                    <span class="ar-text">منازل ومحلات</span>
+                    <span class="en-text" style="display:none;">Homes & Shops</span>
+                </button>
+                <button class="tab-btn" onclick="switchTab(1)">
+                    <span class="ar-text">مصانع وشركات</span>
+                    <span class="en-text" style="display:none;">Factories & Companies</span>
+                </button>
+            </div>
+
+            <!-- Home & Shop Booking -->
+            <div class="tab-content active">
+                <div class="booking-card">
+                    <h3 class="ar-text">حجز فوري عبر واتساب</h3>
+                    <h3 class="en-text" style="display:none;">Instant Booking via WhatsApp</h3>
+                    
+                    <div class="contact-info">
+                        <a href="tel:01028644675" class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h4 class="ar-text">الخط الرئيسي</h4>
+                                <h4 class="en-text" style="display:none;">Main Line</h4>
+                                <p>01028644675</p>
+                            </div>
+                        </a>
+                        <a href="tel:01033560851" class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h4 class="ar-text">خط الطوارئ</h4>
+                                <h4 class="en-text" style="display:none;">Emergency Line</h4>
+                                <p>01033560851</p>
+                            </div>
+                        </a>
+                        <a href="tel:01094117029" class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h4 class="ar-text">خط إضافي</h4>
+                                <h4 class="en-text" style="display:none;">Additional Line</h4>
+                                <p>01094117029</p>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/201028644675" target="_blank" class="contact-item">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-details">
+                                <h4 class="ar-text">واتساب مباشر</h4>
+                                <h4 class="en-text" style="display:none;">Direct WhatsApp</h4>
+                                <p class="ar-text">تواصل الآن</p>
+                                <p class="en-text" style="display:none;">Contact Now</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factory & Company Booking -->
+            <div class="tab-content">
+                <div class="booking-card">
+                    <h3 class="ar-text">نموذج التواصل الرسمي</h3>
+                    <h3 class="en-text" style="display:none;">Official Contact Form</h3>
+                    
+                    <div class="contact-info" style="margin-bottom: 32px;">
+                        <a href="mailto:katto100100@gmail.com" class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4 class="ar-text">البريد الإلكتروني</h4>
+                                <h4 class="en-text" style="display:none;">Email</h4>
+                                <p style="font-size: 16px;">katto100100@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61578658141960" target="_blank" class="contact-item">
+                            <div class="contact-icon" style="background: linear-gradient(135deg, #1877F2 0%, #0C63D4 100%);"><i class="fab fa-facebook"></i></div>
+                            <div class="contact-details">
+                                <h4 class="ar-text">فيسبوك</h4>
+                                <h4 class="en-text" style="display:none;">Facebook</h4>
+                                <p>كاتو - KATO</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <form class="booking-form" id="companyForm">
+                        <div class="form-group">
+                            <label class="ar-text">اسم الشركة / المصنع *</label>
+                            <label class="en-text" style="display:none;">Company / Factory Name *</label>
+                            <input type="text" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="ar-text">الاسم الكامل *</label>
+                            <label class="en-text" style="display:none;">Full Name *</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="ar-text">البريد الإلكتروني *</label>
+                            <label class="en-text" style="display:none;">Email *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="ar-text">رقم الهاتف *</label>
+                            <label class="en-text" style="display:none;">Phone Number *</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="ar-text">نوع الخدمة المطلوبة *</label>
+                            <label class="en-text" style="display:none;">Required Service Type *</label>
+                            <select name="service" required>
+                                <option value="" class="ar-text">اختر نوع الخدمة</option>
+                                <option value="" class="en-text" style="display:none;">Select Service Type</option>
+                                <option value="panels" class="ar-text">لوحات كهربائية صناعية</option>
+                                <option value="panels" class="en-text" style="display:none;">Industrial Electrical Panels</option>
+                                <option value="plc" class="ar-text">أنظمة PLC والتحكم الآلي</option>
+                                <option value="plc" class="en-text" style="display:none;">PLC & Automation Systems</option>
+                                <option value="industrial_electrical" class="ar-text">كهرباء صناعية</option>
+                                <option value="industrial_electrical" class="en-text" style="display:none;">Industrial Electrical Work</option>
+                                <option value="monitoring" class="ar-text">أنظمة مراقبة وحماية</option>
+                                <option value="monitoring" class="en-text" style="display:none;">Monitoring & Protection Systems</option>
+                                <option value="maintenance_contract" class="ar-text">عقد صيانة شامل</option>
+                                <option value="maintenance_contract" class="en-text" style="display:none;">Comprehensive Maintenance Contract</option>
+                                <option value="other" class="ar-text">خدمات أخرى</option>
+                                <option value="other" class="en-text" style="display:none;">Other Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="ar-text">تفاصيل المشروع</label>
+                            <label class="en-text" style="display:none;">Project Details</label>
+                            <textarea name="details" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">
+                            <span class="ar-text">📧 إرسال الطلب</span>
+                            <span class="en-text" style="display:none;">📧 Submit Request</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img/logo.jpeg" alt="KATO Logo">
+                    <p class="ar-text">مركز خدمة متكامل للصيانة والتشطيبات. نقدم أفضل الحلول للمنازل والمحلات والمصانع بأعلى جودة وأفضل الأسعار.</p>
+                    <p class="en-text" style="display:none;">Comprehensive service center for maintenance and finishing. We provide the best solutions for homes, shops, and factories with highest quality and best prices.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/201028644675" class="social-link" title="WhatsApp">💬</a>
+                        <a href="https://www.facebook.com/profile.php?id=61578658141960" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:katto100100@gmail.com" class="social-link" title="Email">📧</a>
+                        <a href="tel:01028644675" class="social-link" title="Phone">📞</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="ar-text">روابط سريعة</h4>
+                    <h4 class="en-text" style="display:none;">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services" class="ar-text">→ خدماتنا</a><a href="#services" class="en-text" style="display:none;">→ Our Services</a></li>
+                        <li><a href="#about" class="ar-text">→ من نحن</a><a href="#about" class="en-text" style="display:none;">→ About Us</a></li>
+                        <li><a href="#workflow" class="ar-text">→ طريقة العمل</a><a href="#workflow" class="en-text" style="display:none;">→ How We Work</a></li>
+                        <li><a href="#gallery" class="ar-text">→ أعمالنا</a><a href="#gallery" class="en-text" style="display:none;">→ Our Work</a></li>
+                        <li><a href="#contact" class="ar-text">→ احجز الآن</a><a href="#contact" class="en-text" style="display:none;">→ Book Now</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="ar-text">خدماتنا</h4>
+                    <h4 class="en-text" style="display:none;">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services" class="ar-text">→ صيانة منزلية</a><a href="#services" class="en-text" style="display:none;">→ Home Maintenance</a></li>
+                        <li><a href="#services" class="ar-text">→ أعمال كهرباء</a><a href="#services" class="en-text" style="display:none;">→ Electrical Work</a></li>
+                        <li><a href="#services" class="ar-text">→ أعمال سباكة</a><a href="#services" class="en-text" style="display:none;">→ Plumbing Work</a></li>
+                        <li><a href="#services" class="ar-text">→ خدمات تجارية</a><a href="#services" class="en-text" style="display:none;">→ Commercial Services</a></li>
+                        <li><a href="#services" class="ar-text">→ عقود صيانة</a><a href="#services" class="en-text" style="display:none;">→ Maintenance Contracts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="ar-text">معلومات التواصل</h4>
+                    <h4 class="en-text" style="display:none;">Contact Information</h4>
+                    <div class="footer-address">
+                        <strong class="ar-text">📍 العنوان:</strong>
+                        <strong class="en-text" style="display:none;">📍 Address:</strong>
+                        <span class="ar-text">السويس - السلام 1<br>شارع عثمان - بجوار مسجد سعد ابن أبى وقاص</span>
+                        <span class="en-text" style="display:none;">Suez - Al Salam 1<br>Othman Street - Next to Saad Ibn Abi Waqas Mosque</span>
+                        <br><br>
+                        <strong>📞 01028644675</strong><br>
+                        <strong>📞 01033560851</strong><br>
+                        <strong>📞 01094117029</strong><br><br>
+                        <strong>📧 katto100100@gmail.com</strong><br>
+                        <strong>📘 كاتو - KATO</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="ar-text">© 2026 KATO - كاتو. جميع الحقوق محفوظة.</p>
+                <p class="en-text" style="display:none;">© 2026 KATO. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <a href="https://wa.me/201028644675" target="_blank" class="float-btn whatsapp">💬</a>
+        <a href="tel:01028644675" class="float-btn phone">📞</a>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
