@@ -1,947 +1,1828 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0F172A" />
-  <title>متجر الريان | Al-Rayyan — أناقة وجودة بأسلوب عالمي</title>
-  <meta name="description" content="متجر الريان — وجهتكم الأولى للأجهزة والأثاث والإلكترونيات في السعودية والخليج. توصيل سريع، ضمان أصلي، دفع آمن.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KATO – شريكك الموثوق في الصيانة الصناعية والتشغيل المتكامل للمصانع والشركات. كفاءة · إدارة · تنفيذ · وقت.">
+    <meta name="keywords" content="صيانة صناعية, مقاولات, تشغيل مصانع, كهرباء صناعية, PLC, HMI, SCADA, VFD, صيانة وقائية, KATO, Suez, Egypt">
+    <meta name="theme-color" content="#0F2038">
+    <title>KATO – كاتو | شريكك الموثوق في الصيانة الصناعية والتشغيل المتكامل</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Scroll Progress -->
-<div style="display: none;" class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-
-<!-- Top Announcement Bar -->
-<div class="announce-bar">
-  <div class="container announce-inner">
-    <div class="announce-track" id="announce-track">
-      <span class="announce-item"><i class="fas fa-truck-fast"></i> توصيل سريع لجميع مناطق المملكة خلال 24-72 ساعة</span>
-      <span class="announce-item"><i class="fas fa-shield-halved"></i> ضمان أصلي معتمد على جميع المنتجات</span>
-      <span class="announce-item"><i class="fas fa-rotate-left"></i> إرجاع مجاني خلال 14 يوم</span>
-      <span class="announce-item"><i class="fas fa-headset"></i> دعم فني 24/7 عبر واتساب</span>
-      <span class="announce-item"><i class="fas fa-lock"></i> دفع آمن مشفر بنسبة 100%</span>
-      <span class="announce-item"><i class="fas fa-certificate"></i> وكيل معتمد لأكبر العلامات التجارية</span>
-      <!-- duplicate for seamless loop -->
-      <span class="announce-item"><i class="fas fa-truck-fast"></i> توصيل سريع لجميع مناطق المملكة خلال 24-72 ساعة</span>
-      <span class="announce-item"><i class="fas fa-shield-halved"></i> ضمان أصلي معتمد على جميع المنتجات</span>
-      <span class="announce-item"><i class="fas fa-rotate-left"></i> إرجاع مجاني خلال 14 يوم</span>
-      <span class="announce-item"><i class="fas fa-headset"></i> دعم فني 24/7 عبر واتساب</span>
-      <span class="announce-item"><i class="fas fa-lock"></i> دفع آمن مشفر بنسبة 100%</span>
-      <span class="announce-item"><i class="fas fa-certificate"></i> وكيل معتمد لأكبر العلامات التجارية</span>
+<!-- ============================================================
+     TOP UTILITY BAR
+     ============================================================ -->
+<div class="topbar">
+    <div class="container topbar-inner">
+        <div class="topbar-left">
+            <span class="topbar-status ar-text"><span class="status-dot"></span>متاحون للطوارئ 24/7</span>
+            <span class="topbar-status en-text" style="display:none;"><span class="status-dot"></span>Available 24/7 for emergencies</span>
+            <span class="topbar-divider"></span>
+            <a href="tel:01028644675"><i class="fas fa-phone"></i> 01028644675</a>
+            <a href="mailto:katto100100@gmail.com"><i class="fas fa-envelope"></i> katto100100@gmail.com</a>
+        </div>
+        <div class="topbar-right">
+            <span class="ar-text"><i class="fas fa-map-marker-alt"></i> السويس – مصر</span>
+            <span class="en-text" style="display:none;"><i class="fas fa-map-marker-alt"></i> Suez – Egypt</span>
+            <span class="topbar-divider"></span>
+            <button class="lang-btn" onclick="toggleLanguage()">
+                <span class="ar-text">EN</span>
+                <span class="en-text" style="display:none;">عربي</span>
+            </button>
+        </div>
     </div>
-  </div>
 </div>
 
-<!-- Header -->
-<header id="main-header">
-  <div class="header-content">
-    <button class="logo" onclick="resetApp()" aria-label="العودة للرئيسية">
-      <span class="logo-mark">R</span>
-      <span class="logo-text">
-        <span class="al">الـ</span><span class="rayyan">ريان</span>
-      </span>
-    </button>
-
-    <nav class="primary-nav" aria-label="القائمة الرئيسية">
-      <ul>
-        <li><button class="nav-link" onclick="resetApp()">الرئيسية</button></li>
-        <li><button class="nav-link" onclick="scrollToSec('products')">المنتجات</button></li>
-        <li><button class="nav-link" onclick="scrollToSec('categories')">الأقسام</button></li>
-        <li><button class="nav-link" onclick="scrollToSec('deals')">العروض</button></li>
-        <li><button class="nav-link" onclick="scrollToSec('why')">لماذا الريان</button></li>
-        <li><button class="nav-link" onclick="scrollToSec('contact')">تواصل معنا</button></li>
-      </ul>
-    </nav>
-
-    <div class="header-actions">
-      <div class="search-box">
-        <i class="fas fa-search" aria-hidden="true"></i>
-        <input type="text" id="search-inp" placeholder="ابحث عن منتج أو قسم..." aria-label="بحث">
-        <button class="search-clear" id="search-clear" aria-label="مسح البحث"><i class="fas fa-times"></i></button>
-      </div>
-      <button class="icon-btn" onclick="openWishlistView()" title="المفضلة" aria-label="المفضلة">
-        <i class="far fa-heart"></i>
-        <span class="badge badge-red" id="wl-count" style="display:none">0</span>
-      </button>
-      <button class="icon-btn cart-btn" id="cart-toggle" title="السلة" aria-label="السلة">
-        <i class="fas fa-shopping-bag"></i>
-        <span class="badge" id="cart-count">0</span>
-      </button>
-      <button class="icon-btn mobile-only" id="mobile-nav-btn" aria-label="القائمة">
-        <i class="fas fa-bars"></i>
-      </button>
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <div class="logo-mark"><i class="fas fa-cog"></i></div>
+            <div class="logo-text">
+                <span class="name">KATO</span>
+                <span class="tag ar-text">كفاءة · إدارة · تنفيذ · وقت</span>
+                <span class="tag en-text" style="display:none;">EFFICIENCY · MGMT · EXECUTION · TIME</span>
+            </div>
+        </a>
+        <nav class="nav" id="nav">
+            <a href="#industries" class="ar-text">القطاعات</a>
+            <a href="#industries" class="en-text" style="display:none;">Industries</a>
+            <a href="#services" class="ar-text">الخدمات</a>
+            <a href="#services" class="en-text" style="display:none;">Services</a>
+            <a href="#about" class="ar-text">من نحن</a>
+            <a href="#about" class="en-text" style="display:none;">About</a>
+            <a href="#workflow" class="ar-text">منهجيتنا</a>
+            <a href="#workflow" class="en-text" style="display:none;">Methodology</a>
+            <a href="#projects" class="ar-text">المشاريع</a>
+            <a href="#projects" class="en-text" style="display:none;">Projects</a>
+            <a href="#plans" class="ar-text">العقود</a>
+            <a href="#plans" class="en-text" style="display:none;">Plans</a>
+            <a href="#contact" class="nav-cta btn btn-primary btn-sm">
+                <span class="ar-text">احجز معاينة</span>
+                <span class="en-text" style="display:none;">Book Inspection</span>
+            </a>
+        </nav>
+        <div class="header-actions">
+            <button class="header-lang" id="header-lang" onclick="toggleLanguage()" aria-label="Switch language">
+                <i class="fas fa-globe"></i>
+                <span class="lang-active" data-lang-active>AR</span>
+                <span class="lang-divider"></span>
+                <span class="lang-alt" data-lang-alt>EN</span>
+            </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </div>
-  </div>
-
-  <!-- Mobile Nav Drawer -->
-  <div class="mobile-nav" id="mobile-nav">
-    <div class="mobile-nav-header">
-      <span>القائمة</span>
-      <button id="close-mobile-nav" aria-label="إغلاق"><i class="fas fa-times"></i></button>
-    </div>
-    <ul>
-      <li><button onclick="resetApp();closeMobileNav()">الرئيسية</button></li>
-      <li><button onclick="scrollToSec('products');closeMobileNav()">المنتجات</button></li>
-      <li><button onclick="scrollToSec('categories');closeMobileNav()">الأقسام</button></li>
-      <li><button onclick="scrollToSec('deals');closeMobileNav()">العروض</button></li>
-      <li><button onclick="scrollToSec('why');closeMobileNav()">لماذا الريان</button></li>
-      <li><button onclick="scrollToSec('bestsellers');closeMobileNav()">الأكثر مبيعاً</button></li>
-      <li><button onclick="scrollToSec('reviews');closeMobileNav()">آراء العملاء</button></li>
-      <li><button onclick="scrollToSec('faq');closeMobileNav()">الأسئلة الشائعة</button></li>
-      <li><button onclick="scrollToSec('contact');closeMobileNav()">تواصل معنا</button></li>
-    </ul>
-  </div>
 </header>
 
-<!-- Overlay -->
-<div class="overlay" id="overlay"></div>
-
-<!-- Cart Drawer -->
-<aside class="cart-drawer" id="cart-drawer" aria-label="سلة التسوق">
-  <header class="cart-head">
-    <div class="cart-head-titles">
-      <h3>سلة التسوق</h3>
-      <span class="cart-head-count" id="cart-head-count">0 منتج</span>
-    </div>
-    <button class="close-drawer" id="close-cart" aria-label="إغلاق السلة"><i class="fas fa-times"></i></button>
-  </header>
-
-  <div class="cart-items" id="cart-items"></div>
-
-  <!-- Coupon -->
-  <div class="cart-coupon">
-    <div class="coupon-row">
-      <i class="fas fa-ticket"></i>
-      <input type="text" id="coupon-input" placeholder="أدخل كود الخصم">
-      <button id="coupon-apply">تطبيق</button>
-    </div>
-    <div class="coupon-hint">جرّب: <button class="coupon-chip" data-code="WELCOME10">WELCOME10</button> <button class="coupon-chip" data-code="RAYYAN20">RAYYAN20</button></div>
-    <div class="coupon-msg" id="coupon-msg"></div>
-  </div>
-
-  <footer class="cart-foot">
-    <div class="cart-summary">
-      <div class="cart-summary-row"><span>المجموع الفرعي</span><span id="cart-subtotal">0 ر.س</span></div>
-      <div class="cart-summary-row discount" id="cart-discount-row" style="display:none"><span>الخصم</span><span id="cart-discount">-0 ر.س</span></div>
-      <div class="cart-summary-row"><span>الشحن</span><span id="cart-shipping">مجاني</span></div>
-      <div class="cart-summary-row total"><span>الإجمالي</span><span id="cart-total">0 ر.س</span></div>
-    </div>
-    <button class="checkout-btn" id="checkout-btn">
-      <i class="fab fa-whatsapp"></i> إتمام الطلب عبر واتساب
-    </button>
-    <p class="cart-secure"><i class="fas fa-lock"></i> الدفع والاستلام من خلال خدمة الواتساب المؤمّنة</p>
-  </footer>
-</aside>
-
-<!-- Product Modal -->
-<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
-  <div class="modal-box">
-    <div class="modal-img-side">
-      <img id="modal-img" src="" alt="">
-      <button class="close-modal" id="close-modal" aria-label="إغلاق"><i class="fas fa-times"></i></button>
-      <div class="modal-discount-badge" id="modal-discount-badge" style="display:none"></div>
-    </div>
-    <div class="modal-info-side">
-      <div class="modal-cat" id="modal-cat"></div>
-      <h2 class="modal-name" id="modal-name"></h2>
-      <div class="modal-stars">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-        <span id="modal-rating-text">(4.5 / 5)</span>
-        <span class="verified-badge"><i class="fas fa-circle-check"></i> منتج أصلي</span>
-      </div>
-      <p class="modal-desc" id="modal-desc"></p>
-
-      <ul class="modal-features">
-        <li><i class="fas fa-truck-fast"></i> توصيل سريع خلال 24-72 ساعة</li>
-        <li><i class="fas fa-shield-halved"></i> ضمان أصلي معتمد</li>
-        <li><i class="fas fa-rotate-left"></i> إرجاع مجاني خلال 14 يوم</li>
-      </ul>
-
-      <div class="modal-price" id="modal-price"></div>
-      <p class="modal-price-note">السعر شامل الضريبة • الدفع عند الاستلام متاح</p>
-
-      <div class="modal-qty">
-        <span>الكمية</span>
-        <div class="qty-control">
-          <button onclick="changeModalQty(-1)" aria-label="إنقاص">−</button>
-          <span id="modal-qty">1</span>
-          <button onclick="changeModalQty(1)" aria-label="زيادة">+</button>
-        </div>
-      </div>
-
-      <div class="modal-btns">
-        <button class="btn-wa-full" id="modal-wa-btn">
-          <i class="fab fa-whatsapp"></i> اطلب الآن عبر واتساب
-        </button>
-        <button class="btn-cart-full" id="modal-cart-btn">
-          <i class="fas fa-shopping-bag"></i> أضف إلى السلة
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Quick View Modal -->
-<div class="modal-overlay" id="quick-modal" role="dialog" aria-modal="true">
-  <div class="modal-box qv-box">
-    <div class="modal-img-side">
-      <img id="qv-img" src="" alt="">
-      <button class="close-modal" id="close-quick" aria-label="إغلاق"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="modal-info-side">
-      <div class="modal-cat" id="qv-cat"></div>
-      <h2 class="modal-name" id="qv-name"></h2>
-      <div class="modal-price" id="qv-price"></div>
-      <p class="modal-desc" id="qv-desc"></p>
-      <div class="modal-btns">
-        <button class="btn-cart-full" id="qv-cart"><i class="fas fa-shopping-bag"></i> أضف إلى السلة</button>
-        <button class="btn-wa-full" id="qv-wa"><i class="fab fa-whatsapp"></i> اطلب الآن</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Social Proof Notification -->
-<div class="notification" id="notification" aria-live="polite">
-  <div class="notification-icon"><i class="fas fa-check"></i></div>
-  <div class="notification-text">
-    <strong id="notif-text">أحمد من الرياض اشترى للتو</strong>
-    <span id="notif-product">ثلاجة سامسونج</span>
-  </div>
-</div>
-
-<main>
-  <!-- ================== HERO ================== -->
-  <section class="hero" id="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="hero-bg-image"></div>
-      <div class="hero-bg-overlay"></div>
-    </div>
-    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
-
-    <div class="container hero-inner">
-      <div class="hero-content">
-        <div class="hero-label">
-          <span class="hero-label-dot"></span>
-          وجهتكم الأولى للتسوق الفاخر في الخليج
-        </div>
-        <h1 class="hero-title">
-          اكتشف عالم
-          <span class="hero-title-em">الأناقة والجودة</span>
-          في كل تفصيل
-        </h1>
-        <p class="hero-subtitle">
-          مجموعة مختارة من أفضل الأجهزة والأثاث والإلكترونيات العالمية، بأسعار تنافسية وضمان أصلي، نوصّلها لباب بيتك.
-        </p>
-        <div class="hero-ctas">
-          <button class="btn btn-primary" onclick="scrollToSec('products')">
-            <i class="fas fa-bag-shopping"></i>
-            <span>تسوّق الآن</span>
-          </button>
-          <button class="btn btn-ghost" onclick="scrollToSec('categories')">
-            <span>استكشف الأقسام</span>
-            <i class="fas fa-arrow-left"></i>
-          </button>
-        </div>
-        <ul class="hero-badges" aria-label="ضمانات المتجر">
-          <li><i class="fas fa-shield-halved"></i> ضمان أصلي</li>
-          <li><i class="fas fa-truck-fast"></i> توصيل سريع</li>
-          <li><i class="fas fa-rotate-left"></i> إرجاع 14 يوم</li>
-          <li><i class="fas fa-headset"></i> دعم 24/7</li>
-        </ul>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-deal-card" aria-label="عرض فلاش">
-          <div class="hero-deal-top">
-            <div class="hero-deal-tag"><i class="fas fa-bolt"></i> عرض فلاش</div>
-            <div class="hero-deal-discount">خصم يصل إلى <strong>25%</strong></div>
-          </div>
-          <div class="hero-deal-body">
-            <div class="hero-deal-title">على مجموعة الأثاث المودرن المختارة</div>
-            <div class="countdown" id="countdown" aria-label="الوقت المتبقي للعرض">
-              <div class="cd-block"><div class="cd-num" id="cd-h">05</div><div class="cd-label">ساعة</div></div>
-              <span class="cd-sep">:</span>
-              <div class="cd-block"><div class="cd-num" id="cd-m">22</div><div class="cd-label">دقيقة</div></div>
-              <span class="cd-sep">:</span>
-              <div class="cd-block"><div class="cd-num" id="cd-s">48</div><div class="cd-label">ثانية</div></div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <div class="logo-mark"><i class="fas fa-cog"></i></div>
+                <div class="logo-text">
+                    <span class="name">KATO</span>
+                </div>
             </div>
-            <button class="hero-deal-btn" onclick="scrollToSec('deals')">استفد من العرض <i class="fas fa-arrow-left"></i></button>
-          </div>
+            <button class="mobile-menu-close" id="mobile-close"><i class="fas fa-times"></i></button>
         </div>
-
-        <div class="hero-trust-strip">
-          <div class="hts-item">
-            <i class="fas fa-star"></i>
-            <div>
-              <div class="hts-num">4.9</div>
-              <div class="hts-label">تقييم العملاء</div>
-            </div>
-          </div>
-          <div class="hts-item">
-            <i class="fas fa-users"></i>
-            <div>
-              <div class="hts-num" data-counter="2000">0</div>
-              <div class="hts-label">عميل سعيد</div>
-            </div>
-          </div>
-          <div class="hts-item">
-            <i class="fas fa-box-open"></i>
-            <div>
-              <div class="hts-num" data-counter="3500">0</div>
-              <div class="hts-label">طلب مكتمل</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <a href="#categories" style="display: none;" class="hero-scroll" aria-label="انتقل للأقسام">
-      <span></span>
-    </a>
-  </section>
-
-  <!-- ================== FEATURES STRIP ================== -->
-  <section class="features-strip" aria-label="مزايا المتجر">
-    <div class="container">
-      <div class="features-grid">
-        <div class="feature-item reveal">
-          <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
-          <div class="feature-text">
-            <h4>توصيل سريع</h4>
-            <p>خلال 24-72 ساعة لجميع المدن</p>
-          </div>
-        </div>
-        <div class="feature-item reveal">
-          <div class="feature-icon"><i class="fas fa-rotate-left"></i></div>
-          <div class="feature-text">
-            <h4>إرجاع مجاني</h4>
-            <p>خلال 14 يوم بدون أي شروط</p>
-          </div>
-        </div>
-        <div class="feature-item reveal">
-          <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
-          <div class="feature-text">
-            <h4>دفع آمن</h4>
-            <p>تشفير معتمد وحماية كاملة</p>
-          </div>
-        </div>
-        <div class="feature-item reveal">
-          <div class="feature-icon"><i class="fas fa-headset"></i></div>
-          <div class="feature-text">
-            <h4>دعم 24/7</h4>
-            <p>فريقنا متاح في أي وقت</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== CATEGORIES ================== -->
-  <section class="section" id="categories">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="section-head-left">
-          <span class="eyebrow">تصفّح حسب القسم</span>
-          <h2>تسوّق حسب الأقسام</h2>
-          <p>اختر القسم الذي يناسبك لعرض المنتجات المخصصة</p>
-        </div>
-      </div>
-      <div class="categories-grid" id="cats-grid">
-        <button class="cat-card active reveal" data-cat="الكل">
-          <div class="cat-icon"><i class="fas fa-th-large"></i></div>
-          <div class="cat-info">
-            <h4>كل المنتجات</h4>
-            <span class="cat-count">19 منتج</span>
-          </div>
-          <i class="fas fa-arrow-left cat-arrow"></i>
-        </button>
-        <button class="cat-card reveal" data-cat="أجهزة كهربائية">
-          <div class="cat-icon"><i class="fas fa-plug"></i></div>
-          <div class="cat-info">
-            <h4>أجهزة كهربائية</h4>
-            <span class="cat-count">5 منتج</span>
-          </div>
-          <i class="fas fa-arrow-left cat-arrow"></i>
-        </button>
-        <button class="cat-card reveal" data-cat="أثاث">
-          <div class="cat-icon"><i class="fas fa-couch"></i></div>
-          <div class="cat-info">
-            <h4>أثاث</h4>
-            <span class="cat-count">6 منتج</span>
-          </div>
-          <i class="fas fa-arrow-left cat-arrow"></i>
-        </button>
-        <button class="cat-card reveal" data-cat="إلكترونيات">
-          <div class="cat-icon"><i class="fas fa-mobile-screen-button"></i></div>
-          <div class="cat-info">
-            <h4>إلكترونيات</h4>
-            <span class="cat-count">4 منتج</span>
-          </div>
-          <i class="fas fa-arrow-left cat-arrow"></i>
-        </button>
-        <button class="cat-card reveal" data-cat="أدوات منزلية">
-          <div class="cat-icon"><i class="fas fa-blender"></i></div>
-          <div class="cat-info">
-            <h4>أدوات منزلية</h4>
-            <span class="cat-count">3 منتج</span>
-          </div>
-          <i class="fas fa-arrow-left cat-arrow"></i>
-        </button>
-        <button class="cat-card reveal" data-cat="سلع استهلاكية">
-          <div class="cat-icon"><i class="fas fa-basket-shopping"></i></div>
-          <div class="cat-info">
-            <h4>سلع استهلاكية</h4>
-            <span class="cat-count">1 منتج</span>
-          </div>
-          <i class="fas fa-arrow-left cat-arrow"></i>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== PRODUCTS ================== -->
-  <section class="section section-alt" id="products">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="section-head-left">
-          <span class="eyebrow">منتجات مختارة بعناية</span>
-          <h2 id="products-title">أحدث المنتجات</h2>
-          <p id="products-sub">مجموعة مختارة بعناية لتناسب ذوقكم</p>
-        </div>
-        <div class="section-head-actions">
-          <select id="sort-select" aria-label="ترتيب">
-            <option value="default">الترتيب الافتراضي</option>
-            <option value="price-asc">السعر: الأقل أولاً</option>
-            <option value="price-desc">السعر: الأعلى أولاً</option>
-            <option value="name">الاسم</option>
-            <option value="discount">الأعلى خصماً</option>
-          </select>
-        </div>
-      </div>
-      <div class="products-grid" id="products-grid"></div>
-    </div>
-  </section>
-
-  <!-- ================== FEATURED DEALS ================== -->
-  <section class="section section-deals" id="deals">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="section-head-left">
-          <span class="eyebrow">عروض حصرية</span>
-          <h2>أقوى العروض والخصومات</h2>
-          <p>خصومات حقيقية على منتجات مختارة — لا تفوّت الفرصة</p>
-        </div>
-        <div class="deals-counter" aria-live="polite">
-          <i class="fas fa-fire"></i>
-          <span>تنتهي العروض خلال</span>
-          <div class="deals-counter-timer" id="deals-timer">12:45:30</div>
-        </div>
-      </div>
-      <div class="deals-grid" id="deals-grid"></div>
-    </div>
-  </section>
-
-  <!-- ================== WHY AL-RAYYAN ================== -->
-  <section class="section" id="why">
-    <div class="container">
-      <div class="section-head reveal center">
-        <div class="section-head-left center">
-          <span class="eyebrow">قيمة حقيقية</span>
-          <h2>لماذا متجر الريان؟</h2>
-          <p>لسنا مجرد متجر، نحن شريكك الموثوق في كل عملية شراء</p>
-        </div>
-      </div>
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <div class="why-icon"><i class="fas fa-medal"></i></div>
-          <h3>جودة معتمدة</h3>
-          <p>جميع منتجاتنا من علامات تجارية عالمية معتمدة، يتم فحصها قبل الشحن للتأكد من مطابقتها لأعلى المعايير.</p>
-          <ul class="why-list">
-            <li><i class="fas fa-check"></i> فحص دقيق قبل الشحن</li>
-            <li><i class="fas fa-check"></i> ضمان من الشركة المصنّعة</li>
-            <li><i class="fas fa-check"></i> تغليف فاخر ومحكم</li>
-          </ul>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-icon"><i class="fas fa-shield-halved"></i></div>
-          <h3>ضمان حقيقي</h3>
-          <p>نقدم ضماناً حقيقياً على جميع المنتجات، وفريق متخصص يتابع كل حالة لضمان رضاك التام.</p>
-          <ul class="why-list">
-            <li><i class="fas fa-check"></i> ضمان يصل إلى سنتين</li>
-            <li><i class="fas fa-check"></i> استبدال فوري عند العيوب</li>
-            <li><i class="fas fa-check"></i> دعم فني متخصص</li>
-          </ul>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-icon"><i class="fas fa-truck-fast"></i></div>
-          <h3>توصيل سريع</h3>
-          <p>شبكة توصيل تغطي جميع مناطق المملكة والخليج، مع إمكانية تتبع الشحنة لحظة بلحظة.</p>
-          <ul class="why-list">
-            <li><i class="fas fa-check"></i> توصيل خلال 24-72 ساعة</li>
-            <li><i class="fas fa-check"></i> تتبع الشحنة أونلاين</li>
-            <li><i class="fas fa-check"></i> توصيل مجاني فوق 200 ر.س</li>
-          </ul>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-icon"><i class="fas fa-headset"></i></div>
-          <h3>خدمة عملاء استثنائية</h3>
-          <p>فريق محترف متاح على مدار الساعة عبر الواتساب للرد على استفساراتك ومساعدتك في كل خطوة.</p>
-          <ul class="why-list">
-            <li><i class="fas fa-check"></i> دعم 24/7 عبر واتساب</li>
-            <li><i class="fas fa-check"></i> فريق سعودي محترف</li>
-            <li><i class="fas fa-check"></i> متابعة ما بعد البيع</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== BEST SELLERS ================== -->
-  <section class="section section-alt" id="bestsellers">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="section-head-left">
-          <span class="eyebrow">الأكثر طلباً</span>
-          <h2>الأكثر مبيعاً هذا الأسبوع</h2>
-          <p>المنتجات التي اختارها عملاؤنا بكثرة</p>
-        </div>
-        <button class="see-all" onclick="scrollToSec('products')">عرض كل المنتجات <i class="fas fa-arrow-left"></i></button>
-      </div>
-      <div class="products-grid" id="bestsellers-grid"></div>
-    </div>
-  </section>
-
-  <!-- ================== BRANDS ================== -->
-  <section class="section brands-section" id="brands">
-    <div class="container">
-      <div class="section-head reveal center">
-        <div class="section-head-left center">
-          <span class="eyebrow">شركاؤنا</span>
-          <h2>علامات تجارية عالمية</h2>
-          <p>نتشرف بأن نكون وكيلاً وموزعاً معتمداً لأكبر العلامات التجارية</p>
-        </div>
-      </div>
-      <div class="brands-row">
-        <div class="brand-track" id="brand-track">
-          <div class="brand-card"><span class="brand-name">Samsung</span></div>
-          <div class="brand-card"><span class="brand-name">LG</span></div>
-          <div class="brand-card"><span class="brand-name">cadoO</span></div>
-          <div class="brand-card"><span class="brand-name">Sony</span></div>
-          <div class="brand-card"><span class="brand-name">Toshiba</span></div>
-          <div class="brand-card"><span class="brand-name">Sharp</span></div>
-          <div class="brand-card"><span class="brand-name">Panasonic</span></div>
-          <div class="brand-card"><span class="brand-name">Hisense</span></div>
-          <div class="brand-card"><span class="brand-name">TCL</span></div>
-          <div class="brand-card"><span class="brand-name">Beko</span></div>
-          <!-- duplicate -->
-          <div class="brand-card"><span class="brand-name">Samsung</span></div>
-          <div class="brand-card"><span class="brand-name">LG</span></div>
-          <div class="brand-card"><span class="brand-name">cadoO</span></div>
-          <div class="brand-card"><span class="brand-name">Sony</span></div>
-          <div class="brand-card"><span class="brand-name">Toshiba</span></div>
-          <div class="brand-card"><span class="brand-name">Sharp</span></div>
-          <div class="brand-card"><span class="brand-name">Panasonic</span></div>
-          <div class="brand-card"><span class="brand-name">Hisense</span></div>
-          <div class="brand-card"><span class="brand-name">TCL</span></div>
-          <div class="brand-card"><span class="brand-name">Beko</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== STATS ================== -->
-  <section class="stats-section" id="stats" aria-label="إحصائيات المتجر">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card reveal">
-          <div class="stat-icon"><i class="fas fa-users"></i></div>
-          <div class="stat-num" data-counter="2000">+0</div>
-          <div class="stat-label">عميل سعيد</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="stat-icon"><i class="fas fa-box-open"></i></div>
-          <div class="stat-num" data-counter="3500">+0</div>
-          <div class="stat-label">طلب تم تسليمه</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="stat-icon"><i class="fas fa-face-smile"></i></div>
-          <div class="stat-num" data-counter="98">0%</div>
-          <div class="stat-label">نسبة رضا العملاء</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="stat-icon"><i class="fas fa-city"></i></div>
-          <div class="stat-num" data-counter="35">0+</div>
-          <div class="stat-label">مدينة نخدمها</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== REVIEWS ================== -->
-  <section class="section" id="reviews">
-    <div class="container">
-      <div class="section-head reveal center">
-        <div class="section-head-left center">
-          <span class="eyebrow">آراء حقيقية</span>
-          <h2>ماذا يقول عملاؤنا؟</h2>
-          <p>تجارب حقيقية من عملاء حقيقيين في مختلف مدن المملكة</p>
-        </div>
-      </div>
-      <div class="reviews-grid">
-        <article class="review-card reveal">
-          <div class="review-head">
-            <div class="review-avatar" data-color="gold">أ.م</div>
-            <div class="review-meta">
-              <div class="review-author-name">أحمد المالكي</div>
-              <div class="review-author-tag"><i class="fas fa-circle-check"></i> مشترٍ موثّق • الرياض</div>
-            </div>
-            <span class="verified-pill"><i class="fas fa-shield-halved"></i> مشتراة</span>
-          </div>
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <span class="review-date">قبل 3 أيام</span>
-          </div>
-          <p class="review-text">تجربة تسوق رائعة! الطقم وصل بحالة ممتازة والجودة تفوق التوقعات. التواصل عبر الواتساب كان سريعاً والاحترافية واضحة في كل خطوة. شكراً لمتجر الريان.</p>
-          <div class="review-product">
-            <i class="fas fa-couch"></i> أثاث المودرن
-          </div>
-        </article>
-
-        <article class="review-card reveal">
-          <div class="review-head">
-            <div class="review-avatar" data-color="navy">م.ش</div>
-            <div class="review-meta">
-              <div class="review-author-name">منيرة الشهري</div>
-              <div class="review-author-tag"><i class="fas fa-circle-check"></i> مشترٍ موثّق • جدة</div>
-            </div>
-            <span class="verified-pill"><i class="fas fa-shield-halved"></i> مشتراة</span>
-          </div>
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <span class="review-date">قبل أسبوع</span>
-          </div>
-          <p class="review-text">الثلاجة ممتازة وبسعر مناسب جداً. التوصيل كان سريع والتغليف محكم جداً. سأعود للشراء مرة أخرى بالتأكيد وأنصح كل العائلات السعودية بهذا المتجر.</p>
-          <div class="review-product">
-            <i class="fas fa-temperature-low"></i> ثلاجة سامسونج
-          </div>
-        </article>
-
-        <article class="review-card reveal">
-          <div class="review-head">
-            <div class="review-avatar" data-color="green">ف.ع</div>
-            <div class="review-meta">
-              <div class="review-author-name">فهد العتيبي</div>
-              <div class="review-author-tag"><i class="fas fa-circle-check"></i> مشترٍ موثّق • الدمام</div>
-            </div>
-            <span class="verified-pill"><i class="fas fa-shield-halved"></i> مشتراة</span>
-          </div>
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-            <span class="review-date">قبل 5 أيام</span>
-          </div>
-          <p class="review-text">سماعة cardoO خيال! الصوت عميق والبطارية تدوم طويلاً. التواصل عبر الواتساب كان سلس جداً والطلب وصل في الوقت المحدد بدون أي تأخير.</p>
-          <div class="review-product">
-            <i class="fas fa-headphones"></i> سماعات cardoO
-          </div>
-        </article>
-
-        <article class="review-card reveal">
-          <div class="review-head">
-            <div class="review-avatar" data-color="purple">ن.ق</div>
-            <div class="review-meta">
-              <div class="review-author-name">نورة القحطاني</div>
-              <div class="review-author-tag"><i class="fas fa-circle-check"></i> مشترٍ موثّق • أبها</div>
-            </div>
-            <span class="verified-pill"><i class="fas fa-shield-halved"></i> مشتراة</span>
-          </div>
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <span class="review-date">قبل 10 أيام</span>
-          </div>
-          <p class="review-text">الأنتريه فخم جداً والتوصيل كان سريع. ألوانه مطابقة تماماً للصور والجودة عالية. أنصح به بشدة لكل من يبحث عن الجودة والذوق الرفيع.</p>
-          <div class="review-product">
-            <i class="fas fa-couch"></i> أنتريه مودرن
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== FAQ ================== -->
-  <section class="section section-alt" id="faq">
-    <div class="container">
-      <div class="section-head reveal center">
-        <div class="section-head-left center">
-          <span class="eyebrow">إجابات سريعة</span>
-          <h2>الأسئلة الشائعة</h2>
-          <p>كل ما تحتاج معرفته عن التسوّق من الريان</p>
-        </div>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item reveal" open>
-          <summary>
-            <span>كيف يمكنني الطلب من متجر الريان؟</span>
-            <i class="fas fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            <p>يمكنك تصفح المنتجات وإضافتها إلى السلة، ثم إتمام الطلب عبر الواتساب بضغطة واحدة. سيتواصل معك فريقنا فوراً لتأكيد الطلب وترتيب الدفع والتوصيل.</p>
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span>كم تستغرق مدة التوصيل؟</span>
-            <i class="fas fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            <p>نقوم بالتوصيل خلال 24 إلى 72 ساعة لجميع مدن المملكة العربية السعودية، مع إمكانية تتبع الشحنة لحظة بلحظة عبر رقم التتبع المرسل إليك.</p>
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span>هل المنتجات أصلية ومضمونة؟</span>
-            <i class="fas fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            <p>بالتأكيد، جميع منتجاتنا أصلية 100% ومستوردة من الوكلاء المعتمدين. نقدم ضماناً حقيقياً يصل إلى سنتين على معظم المنتجات، مع إمكانية الإرجاع المجاني خلال 14 يوم.</p>
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span>ما هي طرق الدفع المتاحة؟</span>
-            <i class="fas fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            <p>نوفر طرق دفع متعددة: الدفع عند الاستلام، التحويل البنكي، مدى، أبل باي، فيزا، ماستركارد، إضافة إلى الدفع عبر تطبيقات STC Pay وTabby وTamara.</p>
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span>ما هي سياسة الإرجاع والاستبدال؟</span>
-            <i class="fas fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            <p>نوفر إرجاعاً مجانياً خلال 14 يوم من تاريخ الاستلام في حال وجود عيب مصنعي أو عدم مطابقة المنتج للوصف. الاستبدال متاح في حال توفر المنتج البديل.</p>
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span>هل تخدمون جميع مدن المملكة؟</span>
-            <i class="fas fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            <p>نعم، نخدم أكثر من 35 مدينة في المملكة العربية السعودية ودول الخليج، مع شبكة توصيل تغطي جميع المناطق الحضرية والريفية.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== ABOUT ================== -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img-wrap reveal">
-          <img src="img/photo-1555529669-e69e7aa0ba9a.avif" alt="متجر الريان" referrerpolicy="no-referrer" loading="lazy">
-          <div class="about-floating-card">
-            <div class="afc-num">+6</div>
-            <div class="afc-lbl">سنوات من<br>التميّز</div>
-          </div>
-          
-        </div>
-        <div class="about-text reveal">
-          <span class="eyebrow">من نحن</span>
-          <h2>قصتنا معكم</h2>
-          <h3>حيث تلتقي الجودة بالأصالة</h3>
-          <p>بدأنا رحلة الريان بحلم بسيط: تقديم تجربة تسوق إلكتروني استثنائية للعائلات السعودية والخليجية. نختار منتجاتنا بعناية فائقة من أكبر العلامات التجارية العالمية، ونضمن لك تجربة شراء سلسة من البداية حتى وصول المنتج إلى باب منزلك.</p>
-          <p>اليوم، وبعد أكثر من ست سنوات من العمل الدؤوب، نفخر بثقة آلاف العائلات في المملكة، ونسعى دائماً للارتقاء بمعايير التسوق الإلكتروني في المنطقة.</p>
-          <div class="about-vals">
-            <div class="about-val">
-              <h4><i class="fas fa-eye"></i> رؤيتنا</h4>
-              <p>أن نكون المتجر الأول والمرجع في تقديم تجربة تسوق إلكترونية فاخرة ومتكاملة في المنطقة.</p>
-            </div>
-            <div class="about-val">
-              <h4><i class="fas fa-gem"></i> قيمنا</h4>
-              <p>الصدق، الشفافية، الجودة، والالتزام الكامل برضا العميل في كل خطوة من رحلته معنا.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== POLICIES ================== -->
-  <section class="section section-policies" id="policies">
-    <div class="container">
-      <div class="section-head reveal center">
-        <div class="section-head-left center">
-          <span class="eyebrow">سياساتنا</span>
-          <h2>التزاماتنا تجاهك</h2>
-          <p>سياسات واضحة وعادلة تحفظ حقوقك</p>
-        </div>
-      </div>
-      <div class="policies-grid">
-        <div class="policy-card reveal">
-          <div class="policy-icon"><i class="fas fa-truck-fast"></i></div>
-          <h4>سياسة الشحن</h4>
-          <p>توصيل خلال 24-72 ساعة لجميع مدن المملكة. شحن مجاني للطلبات فوق 200 ر.س. إمكانية تتبع الشحنة لحظة بلحظة.</p>
-        </div>
-        <div class="policy-card reveal">
-          <div class="policy-icon"><i class="fas fa-rotate-left"></i></div>
-          <h4>سياسة الإرجاع</h4>
-          <p>إرجاع مجاني خلال 14 يوم من تاريخ الاستلام. استرداد كامل للقيمة في حال وجود عيب أو عدم مطابقة للوصف.</p>
-        </div>
-        <div class="policy-card reveal">
-          <div class="policy-icon"><i class="fas fa-shield-halved"></i></div>
-          <h4>الضمان</h4>
-          <p>ضمان أصلي من الشركة المصنّعة يصل إلى سنتين. صيانة مجانية خلال فترة الضمان من خلال مراكز معتمدة.</p>
-        </div>
-        <div class="policy-card reveal">
-          <div class="policy-icon"><i class="fas fa-credit-card"></i></div>
-          <h4>طرق الدفع</h4>
-          <p>الدفع عند الاستلام، مدى، فيزا، ماستركارد، أبل باي، STC Pay، تابي، تمارا. جميع المعاملات مشفّرة وآمنة.</p>
-        </div>
-        <div class="policy-card reveal">
-          <div class="policy-icon"><i class="fas fa-user-shield"></i></div>
-          <h4>سياسة الخصوصية</h4>
-          <p>بياناتك الشخصية محمية بالكامل. نلتزم بمعايير الأمان العالمية ولا نشارك أي معلومات مع أطراف ثالثة.</p>
-        </div>
-        <div class="policy-card reveal">
-          <div class="policy-icon"><i class="fas fa-handshake"></i></div>
-          <h4>خدمة ما بعد البيع</h4>
-          <p>فريق متخصص يتابع طلبك حتى بعد الاستلام. ضمان رضاك التام هو أولويتنا القصوى.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== CONTACT CTA ================== -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="contact-cta reveal">
-        <div class="cta-decor cta-decor-1" aria-hidden="true"></div>
-        <div class="cta-decor cta-decor-2" aria-hidden="true"></div>
-        <div class="cta-text">
-          <span class="eyebrow light">نحن هنا لخدمتك</span>
-          <h2>هل لديك أي استفسار؟</h2>
-          <p>فريق خدمة العملاء لدينا جاهز للرد على جميع تساؤلاتكم على مدار الساعة عبر الواتساب.</p>
-          <ul class="cta-list">
-            <li><i class="fas fa-check"></i> رد فوري خلال دقائق</li>
-            <li><i class="fas fa-check"></i> استشارات مجانية قبل الشراء</li>
-            <li><i class="fas fa-check"></i> متابعة الطلب من البداية حتى الاستلام</li>
-          </ul>
-        </div>
-        <a href="https://wa.me/201068300432" target="_blank" rel="noopener" class="btn-wa-cta">
-          <i class="fab fa-whatsapp"></i>
-          <div>
-            <div class="cta-btn-title">تحدث معنا الآن</div>
-            <div class="cta-btn-sub">متاحون 24/7</div>
-          </div>
+        <a href="#industries" onclick="closeMobile()"><span class="ar-text">القطاعات</span><span class="en-text" style="display:none;">Industries</span></a>
+        <a href="#services" onclick="closeMobile()"><span class="ar-text">الخدمات</span><span class="en-text" style="display:none;">Services</span></a>
+        <a href="#about" onclick="closeMobile()"><span class="ar-text">من نحن</span><span class="en-text" style="display:none;">About</span></a>
+        <a href="#workflow" onclick="closeMobile()"><span class="ar-text">منهجيتنا</span><span class="en-text" style="display:none;">Methodology</span></a>
+        <a href="#projects" onclick="closeMobile()"><span class="ar-text">المشاريع</span><span class="en-text" style="display:none;">Projects</span></a>
+        <a href="#plans" onclick="closeMobile()"><span class="ar-text">العقود</span><span class="en-text" style="display:none;">Plans</span></a>
+        <a href="#contact" onclick="closeMobile()"><span class="ar-text">التقارير</span><span class="en-text" style="display:none;">Reports</span></a>
+        <a href="#contact" class="btn btn-primary" onclick="closeMobile()">
+            <span class="ar-text">🔍 احجز معاينة مجانية</span>
+            <span class="en-text" style="display:none;">🔍 Book Free Inspection</span>
         </a>
-      </div>
     </div>
-  </section>
-</main>
+</div>
 
-<!-- FOOTER -->
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+    <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80" alt="Industrial Control Room">
+    </div>
+    <div class="hero-grid-pattern"></div>
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-eyebrow">
+                    <i class="fas fa-shield-halved"></i>
+                    <span class="ar-text">شريكك التشغيلي للصناعة</span>
+                    <span class="en-text" style="display:none;">Your Industrial Operations Partner</span>
+                </div>
+                <h1>
+                    <span class="ar-text">شريكك الموثوق في <span class="accent">الصيانة الصناعية</span> والتشغيل المتكامل</span>
+                    <span class="en-text" style="display:none;">Your Trusted Partner for <span class="accent">Industrial Maintenance</span> & Integrated Operations</span>
+                </h1>
+                <p class="hero-lede">
+                    <span class="ar-text">نقلل توقفات الإنتاج ونرفع كفاءة التشغيل من خلال صيانة وقائية، فرق متخصصة، وتقارير فنية تساعد الإدارة على اتخاذ القرار. عقود صيانة شاملة، استجابة طوارئ 24/7، ودراسات فنية دقيقة لكل موقع.</span>
+                    <span class="en-text" style="display:none;">We reduce production downtime and raise operational efficiency through preventive maintenance, specialized teams, and technical reports that help management decide. Comprehensive maintenance contracts, 24/7 emergency response, and precise technical studies for every site.</span>
+                </p>
+                <div class="hero-bullets">
+                    <div class="hero-bullet"><i class="fas fa-check"></i>
+                        <span class="ar-text">صيانة وقائية تقلل الأعطال</span>
+                        <span class="en-text" style="display:none;">Preventive maintenance that reduces failures</span>
+                    </div>
+                    <div class="hero-bullet"><i class="fas fa-check"></i>
+                        <span class="ar-text">استجابة طوارئ خلال ساعات</span>
+                        <span class="en-text" style="display:none;">Emergency response within hours</span>
+                    </div>
+                    <div class="hero-bullet"><i class="fas fa-check"></i>
+                        <span class="ar-text">تقارير فنية لإدارة الموقع</span>
+                        <span class="en-text" style="display:none;">Technical reports for site management</span>
+                    </div>
+                    <div class="hero-bullet"><i class="fas fa-check"></i>
+                        <span class="ar-text">كوادر فنية معتمدة</span>
+                        <span class="en-text" style="display:none;">Certified technical crews</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i>
+                        <span class="ar-text">احجز معاينة مجانية</span>
+                        <span class="en-text" style="display:none;">Book Free Inspection</span>
+                    </a>
+                    <a href="https://wa.me/201028644675" target="_blank" class="btn btn-outline-light btn-lg">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="ar-text">تواصل واتساب</span>
+                        <span class="en-text" style="display:none;">WhatsApp Us</span>
+                    </a>
+                </div>
+                <div class="hero-trustline">
+                    <span><i class="fas fa-shield-halved" style="color: var(--gold-400);"></i> <strong class="ar-text">5+ سنوات</strong><strong class="en-text" style="display:none;">5+ Years</strong> <span class="ar-text">خبرة تشغيلية</span><span class="en-text" style="display:none;">operational experience</span></span>
+                    <span class="dot"></span>
+                    <span><i class="fas fa-building" style="color: var(--gold-400);"></i> <strong>500+</strong> <span class="ar-text">موقع تم خدمته</span><span class="en-text" style="display:none;">sites served</span></span>
+                    <span class="dot"></span>
+                    <span><i class="fas fa-certificate" style="color: var(--gold-400);"></i> <strong class="ar-text">معتمدون</strong><strong class="en-text" style="display:none;">Certified</strong> <span class="ar-text">في السلامة والجودة</span><span class="en-text" style="display:none;">in safety & quality</span></span>
+                </div>
+            </div>
+
+            <div class="hero-kpi-card">
+                <div class="kpi-head">
+                    <h3>
+                        <span class="ar-text">لوحة الأداء</span>
+                        <span class="en-text" style="display:none;">Performance Snapshot</span>
+                    </h3>
+                    <span class="live"><span class="live-dot"></span> <span class="ar-text">مباشر</span><span class="en-text" style="display:none;">LIVE</span></span>
+                </div>
+                <div class="kpi-grid">
+                    <div class="kpi">
+                        <div class="kpi-num"><span data-counter="500" data-suffix="+">0</span></div>
+                        <div class="kpi-label ar-text">عميل راضي خدمناه</div>
+                        <div class="kpi-label en-text" style="display:none;">Satisfied clients served</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-num"><span data-counter="24" data-suffix="/7">0</span></div>
+                        <div class="kpi-label ar-text">استجابة طوارئ</div>
+                        <div class="kpi-label en-text" style="display:none;">Emergency response</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-num"><span data-counter="98" data-suffix="%">0</span></div>
+                        <div class="kpi-label ar-text">نسبة الالتزام بالمواعيد</div>
+                        <div class="kpi-label en-text" style="display:none;">Schedule commitment</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-num"><span data-counter="5" data-suffix="+">0</span></div>
+                        <div class="kpi-label ar-text">سنوات خبرة ميدانية</div>
+                        <div class="kpi-label en-text" style="display:none;">Years field experience</div>
+                    </div>
+                </div>
+                <div class="kpi-foot">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="ar-text">بيانات تشغيلية فعلية من عملياتنا الميدانية في المصانع</span>
+                    <span class="en-text" style="display:none;">Real operational data from our field work in factories</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     TRUST BAR
+     ============================================================ -->
+<div class="trustbar">
+    <div class="container trustbar-inner">
+        <div class="trustbar-label">
+            <span class="ar-text">نلتزم بالمعايير الصناعية المعتمدة</span>
+            <span class="en-text" style="display:none;">Compliant with industry standards</span>
+        </div>
+        <div class="trustbar-items">
+            <div class="trust-item"><i class="fas fa-hard-hat"></i> <span>OSHA Safety</span></div>
+            <div class="trust-item"><i class="fas fa-award"></i> <span>ISO 9001:2015</span></div>
+            <div class="trust-item"><i class="fas fa-fire-extinguisher"></i> <span>NFC Fire Code</span></div>
+            <div class="trust-item"><i class="fas fa-bolt"></i> <span>IEC 60364</span></div>
+            <div class="trust-item"><i class="fas fa-leaf"></i> <span>ISO 14001</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================
+     INDUSTRIES WE SERVE
+     ============================================================ -->
+<section id="industries">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">القطاعات المستهدفة</span>
+                <span class="en-text" style="display:none;">Industries We Serve</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">نخدم <span class="accent">قطاعات صناعية متنوعة</span> بموثوقية</span>
+                <span class="en-text" style="display:none;">We serve <span class="accent">diverse industrial sectors</span> with reliability</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">فريقنا يفهم متطلبات كل قطاع ويقدم حلول صيانة وتشغيل مصممة للبيئة الخاصة بكل مصنع. من خطوط الإنتاج إلى المرافق اللوجستية.</span>
+                <span class="en-text" style="display:none;">Our team understands the requirements of every sector and delivers maintenance and operation solutions tailored to each factory's environment. From production lines to logistics facilities.</span>
+            </p>
+        </div>
+        <div class="industries-grid">
+            <div class="industry-card reveal">
+                <div class="ind-img"><img src="https://images.unsplash.com/photo-1565945678997-3a5f63aef2ad?auto=format&fit=crop&w=600&q=80" alt="Food factory"></div>
+                <div class="ind-content">
+                    <div class="ind-icon"><i class="fas fa-burger"></i></div>
+                    <div class="ind-text">
+                        <h3>
+                            <span class="ar-text">مصانع الأغذية</span>
+                            <span class="en-text" style="display:none;">Food & Beverage</span>
+                        </h3>
+                        <p>
+                            <span class="ar-text">صيانة تتوافق مع معايير HACCP وسلامة الغذاء</span>
+                            <span class="en-text" style="display:none;">Maintenance compliant with HACCP & food safety</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="industry-card reveal reveal-delay-1">
+                <div class="ind-img"><img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=600&q=80" alt="Pharma"></div>
+                <div class="ind-content">
+                    <div class="ind-icon"><i class="fas fa-pills"></i></div>
+                    <div class="ind-text">
+                        <h3>
+                            <span class="ar-text">مصانع الأدوية</span>
+                            <span class="en-text" style="display:none;">Pharmaceutical</span>
+                        </h3>
+                        <p>
+                            <span class="ar-text">بيئات نظيفة وامتثال GMP كامل</span>
+                            <span class="en-text" style="display:none;">Clean environments with full GMP compliance</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="industry-card reveal reveal-delay-2">
+                <div class="ind-img"><img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=600&q=80" alt="Plastic"></div>
+                <div class="ind-content">
+                    <div class="ind-icon"><i class="fas fa-cube"></i></div>
+                    <div class="ind-text">
+                        <h3>
+                            <span class="ar-text">مصانع البلاستيك</span>
+                            <span class="en-text" style="display:none;">Plastics & Polymers</span>
+                        </h3>
+                        <p>
+                            <span class="ar-text">صيانة ماكينات البثق والحقن والقولبة</span>
+                            <span class="en-text" style="display:none;">Extrusion, injection & molding machine service</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="industry-card reveal reveal-delay-3">
+                <div class="ind-img"><img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80" alt="Chemical"></div>
+                <div class="ind-content">
+                    <div class="ind-icon"><i class="fas fa-flask"></i></div>
+                    <div class="ind-text">
+                        <h3>
+                            <span class="ar-text">مصانع الكيماويات</span>
+                            <span class="en-text" style="display:none;">Chemicals</span>
+                        </h3>
+                        <p>
+                            <span class="ar-text">صيانة في بيئات حساسة مع بروتوكولات سلامة صارمة</span>
+                            <span class="en-text" style="display:none;">Service in sensitive environments with strict safety protocols</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="industry-card reveal">
+                <div class="ind-img"><img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=600&q=80" alt="Metals"></div>
+                <div class="ind-content">
+                    <div class="ind-icon"><i class="fas fa-industry"></i></div>
+                    <div class="ind-text">
+                        <h3>
+                            <span class="ar-text">المصانع المعدنية</span>
+                            <span class="en-text" style="display:none;">Metals & Foundries</span>
+                        </h3>
+                        <p>
+                            <span class="ar-text">صيانة مكثفة لخطوط الإنتاج المعدني</span>
+                            <span class="en-text" style="display:none;">Heavy-duty maintenance for metal production lines</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="industry-card reveal reveal-delay-1">
+                <div class="ind-img"><img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80" alt="Warehouse"></div>
+                <div class="ind-content">
+                    <div class="ind-icon"><i class="fas fa-warehouse"></i></div>
+                    <div class="ind-text">
+                        <h3>
+                            <span class="ar-text">المخازن واللوجستيات</span>
+                            <span class="en-text" style="display:none;">Warehousing & Logistics</span>
+                        </h3>
+                        <p>
+                            <span class="ar-text">صيانة أنظمة التخزين والرافعات والإضاءة</span>
+                            <span class="en-text" style="display:none;">Storage systems, cranes, lighting service</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="industry-card reveal reveal-delay-2">
+                <div class="ind-img"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Admin"></div>
+                <div class="ind-content">
+                    <div class="ind-icon"><i class="fas fa-building"></i></div>
+                    <div class="ind-text">
+                        <h3>
+                            <span class="ar-text">المباني الإدارية</span>
+                            <span class="en-text" style="display:none;">Admin Buildings</span>
+                        </h3>
+                        <p>
+                            <span class="ar-text">تشغيل وصيانة المرافق الإدارية بالكامل</span>
+                            <span class="en-text" style="display:none;">Full facility operation for admin buildings</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="industry-card reveal reveal-delay-3">
+                <div class="ind-img"><img src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=600&q=80" alt="Commercial"></div>
+                <div class="ind-content">
+                    <div class="ind-icon"><i class="fas fa-shop"></i></div>
+                    <div class="ind-text">
+                        <h3>
+                            <span class="ar-text">المراكز التجارية</span>
+                            <span class="en-text" style="display:none;">Commercial Centers</span>
+                        </h3>
+                        <p>
+                            <span class="ar-text">صيانة HVAC وكهرباء وأنظمة السلامة</span>
+                            <span class="en-text" style="display:none;">HVAC, electrical & safety systems service</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SERVICES — Interactive Experience
+     ============================================================ -->
+<section id="services" class="bg-soft">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">الخدمات المتكاملة</span>
+                <span class="en-text" style="display:none;">Integrated Services</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">حلول <span class="accent">صيانة وتشغيل</span> متكاملة للمصانع</span>
+                <span class="en-text" style="display:none;">Integrated <span class="accent">maintenance & operations</span> solutions for factories</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">من الكهرباء والتحكم الآلي إلى السباكة والتكييف والمقاولات — فريق متخصص لكل تخصص تحت إدارة موحدة.</span>
+                <span class="en-text" style="display:none;">From electrical and automation to plumbing, HVAC, and contracting — a specialized team for every trade under unified management.</span>
+            </p>
+        </div>
+
+        <div class="services-wrap reveal">
+            <div class="service-list" id="service-list">
+                <div class="service-tab active" data-tab="0">
+                    <div class="st-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="st-text">
+                        <h4>
+                            <span class="ar-text">كهرباء وكنترول صناعي</span>
+                            <span class="en-text" style="display:none;">Industrial Electrical & Control</span>
+                        </h4>
+                        <p>
+                            <span class="ar-text">لوحات، تأسيس، شبكات، حماية</span>
+                            <span class="en-text" style="display:none;">Panels, installation, networks, protection</span>
+                        </p>
+                    </div>
+                    <i class="st-arrow fas fa-chevron-left"></i>
+                </div>
+                <div class="service-tab" data-tab="1">
+                    <div class="st-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="st-text">
+                        <h4>
+                            <span class="ar-text">أنظمة PLC والتحكم الآلي</span>
+                            <span class="en-text" style="display:none;">PLC & Automation Systems</span>
+                        </h4>
+                        <p>
+                            <span class="ar-text">برمجة، HMI، SCADA، VFD</span>
+                            <span class="en-text" style="display:none;">Programming, HMI, SCADA, VFD</span>
+                        </p>
+                    </div>
+                    <i class="st-arrow fas fa-chevron-left"></i>
+                </div>
+                <div class="service-tab" data-tab="2">
+                    <div class="st-icon"><i class="fas fa-snowflake"></i></div>
+                    <div class="st-text">
+                        <h4>
+                            <span class="ar-text">التكييف الصناعي</span>
+                            <span class="en-text" style="display:none;">Industrial HVAC</span>
+                        </h4>
+                        <p>
+                            <span class="ar-text">تركيب، صيانة، شحن فريون</span>
+                            <span class="en-text" style="display:none;">Install, service, freon recharge</span>
+                        </p>
+                    </div>
+                    <i class="st-arrow fas fa-chevron-left"></i>
+                </div>
+                <div class="service-tab" data-tab="3">
+                    <div class="st-icon"><i class="fas fa-droplet"></i></div>
+                    <div class="st-text">
+                        <h4>
+                            <span class="ar-text">الفلاتر وأنظمة المياه</span>
+                            <span class="en-text" style="display:none;">Filters & Water Systems</span>
+                        </h4>
+                        <p>
+                            <span class="ar-text">فلاتر، RO، محطات تحلية</span>
+                            <span class="en-text" style="display:none;">Filters, RO, desalination plants</span>
+                        </p>
+                    </div>
+                    <i class="st-arrow fas fa-chevron-left"></i>
+                </div>
+                <div class="service-tab" data-tab="4">
+                    <div class="st-icon"><i class="fas fa-wrench"></i></div>
+                    <div class="st-text">
+                        <h4>
+                            <span class="ar-text">السباكة الصناعية</span>
+                            <span class="en-text" style="display:none;">Industrial Plumbing</span>
+                        </h4>
+                        <p>
+                            <span class="ar-text">شبكات، مضخات، PPR وPVC</span>
+                            <span class="en-text" style="display:none;">Networks, pumps, PPR & PVC</span>
+                        </p>
+                    </div>
+                    <i class="st-arrow fas fa-chevron-left"></i>
+                </div>
+                <div class="service-tab" data-tab="5">
+                    <div class="st-icon"><i class="fas fa-helmet-safety"></i></div>
+                    <div class="st-text">
+                        <h4>
+                            <span class="ar-text">المقاولات والتشطيبات</span>
+                            <span class="en-text" style="display:none;">Contracting & Finishing</span>
+                        </h4>
+                        <p>
+                            <span class="ar-text">تجهيز مواقع، دهانات، تشطيبات</span>
+                            <span class="en-text" style="display:none;">Site prep, painting, finishing</span>
+                        </p>
+                    </div>
+                    <i class="st-arrow fas fa-chevron-left"></i>
+                </div>
+            </div>
+
+            <div class="service-panel" id="service-panel">
+                <!-- Panel content will be injected by JS based on selected tab -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     WHY KATO
+     ============================================================ -->
+<section id="why">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">لماذا KATO</span>
+                <span class="en-text" style="display:none;">Why KATO</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">ما الذي <span class="accent">يميزنا</span> في سوق الصيانة الصناعية؟</span>
+                <span class="en-text" style="display:none;">What <span class="accent">sets us apart</span> in industrial maintenance?</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">لا نقدم خدمة صيانة فقط — نقدم نظام تشغيل كامل يهدف لتقليل توقفات الإنتاج ورفع كفاءة الموقع.</span>
+                <span class="en-text" style="display:none;">We don't just provide maintenance — we deliver a full operating system aimed at reducing downtime and raising site efficiency.</span>
+            </p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="why-icon"><i class="fas fa-headset"></i></div>
+                <h3>
+                    <span class="ar-text">استجابة سريعة</span>
+                    <span class="en-text" style="display:none;">Rapid Response</span>
+                </h3>
+                <p>
+                    <span class="ar-text">فرق جاهزة للطوارئ على مدار الساعة. نوصل خلال ساعات من البلاغ ونبدأ التشخيص الفوري.</span>
+                    <span class="en-text" style="display:none;">Teams on standby 24/7. We arrive within hours and start immediate diagnostics.</span>
+                </p>
+            </div>
+            <div class="why-card reveal reveal-delay-1">
+                <div class="why-icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>
+                    <span class="ar-text">صيانة وقائية حقيقية</span>
+                    <span class="en-text" style="display:none;">True Preventive Maintenance</span>
+                </h3>
+                <p>
+                    <span class="ar-text">جداول زمنية واضحة لكل بند صيانة، تنفيذ منظم، وتقارير موثقة قبل وبعد العمل.</span>
+                    <span class="en-text" style="display:none;">Clear schedules for every maintenance item, organized execution, and reports documented before and after.</span>
+                </p>
+            </div>
+            <div class="why-card reveal reveal-delay-2">
+                <div class="why-icon"><i class="fas fa-file-contract"></i></div>
+                <h3>
+                    <span class="ar-text">تقارير فنية احترافية</span>
+                    <span class="en-text" style="display:none;">Professional Technical Reports</span>
+                </h3>
+                <p>
+                    <span class="ar-text">تقارير دورية تساعد الإدارة على اتخاذ القرار: حالة المعدات، المخاطر، التوصيات، وخطة التحسين.</span>
+                    <span class="en-text" style="display:none;">Periodic reports that help management decide: equipment status, risks, recommendations, and improvement plans.</span>
+                </p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon"><i class="fas fa-user-gear"></i></div>
+                <h3>
+                    <span class="ar-text">كوادر متخصصة</span>
+                    <span class="en-text" style="display:none;">Specialized Crews</span>
+                </h3>
+                <p>
+                    <span class="ar-text">فنيون معتمدون لكل تخصص: كهرباء، تحكم آلي، تكييف، سباكة، ميكانيكا. تدريب مستمر.</span>
+                    <span class="en-text" style="display:none;">Certified technicians for every trade: electrical, automation, HVAC, plumbing, mechanical. Continuous training.</span>
+                </p>
+            </div>
+            <div class="why-card reveal reveal-delay-1">
+                <div class="why-icon"><i class="fas fa-handshake"></i></div>
+                <h3>
+                    <span class="ar-text">إدارة عقود واضحة</span>
+                    <span class="en-text" style="display:none;">Clear Contract Management</span>
+                </h3>
+                <p>
+                    <span class="ar-text">نطاق خدمة مفصل، استجابة مضمونة، شفافية كاملة في التسعير. لا مفاجآت.</span>
+                    <span class="en-text" style="display:none;">Detailed scope, guaranteed response, full pricing transparency. No surprises.</span>
+                </p>
+            </div>
+            <div class="why-card reveal reveal-delay-2">
+                <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>
+                    <span class="ar-text">متابعة مستمرة</span>
+                    <span class="en-text" style="display:none;">Continuous Follow-up</span>
+                </h3>
+                <p>
+                    <span class="ar-text">متابعة دورية لما بعد التنفيذ، قياس مؤشرات الأداء، وتطوير مستمر للخطة.</span>
+                    <span class="en-text" style="display:none;">Regular follow-up after execution, KPI measurement, and continuous plan improvement.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about" class="bg-soft">
+    <div class="container">
+        <div class="section-head left reveal">
+            <span class="eyebrow">
+                <span class="ar-text">من نحن</span>
+                <span class="en-text" style="display:none;">About KATO</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">كاتو <span class="accent">مش مجرد صيانة</span> — ده نظام تشغيل</span>
+                <span class="en-text" style="display:none;">KATO is <span class="accent">more than maintenance</span> — it's an operating system</span>
+            </h2>
+        </div>
+
+        <div class="about-inner">
+            <div class="about-intro reveal">
+                <p>
+                    <span class="ar-text">كاتو مركز خدمة متخصص في الصيانة والمقاولات للمصانع والشركات. نقدم إدارة وتشغيل وصيانة متكاملة للمرافق داخل المواقع الصناعية بعقلية وقائية وفريق عمل منظم.</span>
+                    <span class="en-text" style="display:none;">KATO is a service center specialized in maintenance and contracting for factories and companies. We provide integrated facility management, operation, and maintenance within industrial sites with a preventive mindset and an organized team.</span>
+                </p>
+                <p>
+                    <span class="ar-text">هدفنا ليس إصلاح العطل فقط، بل منعه من الأساس. من خلال خطة صيانة واضحة، وتنفيذ منظم، وتقارير فنية تساعد الإدارة على اتخاذ القرار الصحيح في الوقت المناسب.</span>
+                    <span class="en-text" style="display:none;">Our goal is not just to fix a failure, but to prevent it in the first place. Through a clear maintenance plan, organized execution, and technical reports that help management make the right decision at the right time.</span>
+                </p>
+
+                <div class="about-slogan">
+                    <div class="label">
+                        <span class="ar-text">معنى KATO</span>
+                        <span class="en-text" style="display:none;">The KATO Formula</span>
+                    </div>
+                    <div class="formula">
+                        <span class="ar-text">كاتو = <span>كفاءة</span> + <span>إدارة</span> + <span>تنفيذ</span> + <span>وقت</span></span>
+                        <span class="en-text" style="display:none;">KATO = <span>Efficiency</span> + <span>Management</span> + <span>Execution</span> + <span>Time</span></span>
+                    </div>
+                    <div class="desc">
+                        <span class="ar-text">نظام تشغيل متكامل يقلل توقف الإنتاج ويرفع كفاءة شغلك</span>
+                        <span class="en-text" style="display:none;">An integrated operating system that reduces downtime and raises your operational efficiency</span>
+                    </div>
+                </div>
+
+                <div class="kato-letters">
+                    <div class="kato-letter"><span class="ch">ك</span> <span class="ar-text">كفاءة</span><span class="en-text" style="display:none;">Efficiency</span></div>
+                    <div class="kato-letter"><span class="ch">ا</span> <span class="ar-text">إدارة</span><span class="en-text" style="display:none;">Management</span></div>
+                    <div class="kato-letter"><span class="ch">ت</span> <span class="ar-text">تنفيذ</span><span class="en-text" style="display:none;">Execution</span></div>
+                    <div class="kato-letter"><span class="ch">و</span> <span class="ar-text">وقت</span><span class="en-text" style="display:none;">Time</span></div>
+                </div>
+
+                <div class="values-list">
+                    <div class="v"><i class="fas fa-check"></i> <span class="ar-text">الجودة</span><span class="en-text" style="display:none;">Quality</span></div>
+                    <div class="v"><i class="fas fa-check"></i> <span class="ar-text">الاعتمادية</span><span class="en-text" style="display:none;">Reliability</span></div>
+                    <div class="v"><i class="fas fa-check"></i> <span class="ar-text">السلامة</span><span class="en-text" style="display:none;">Safety</span></div>
+                    <div class="v"><i class="fas fa-check"></i> <span class="ar-text">الالتزام</span><span class="en-text" style="display:none;">Commitment</span></div>
+                    <div class="v"><i class="fas fa-check"></i> <span class="ar-text">التطوير المستمر</span><span class="en-text" style="display:none;">Continuous Development</span></div>
+                </div>
+            </div>
+
+            <div class="reveal reveal-delay-1">
+                <div class="vmv-grid">
+                    <div class="vmv">
+                        <div class="vmv-icon"><i class="fas fa-eye"></i></div>
+                        <div>
+                            <h4>
+                                <span class="ar-text">رؤيتنا</span>
+                                <span class="en-text" style="display:none;">Our Vision</span>
+                            </h4>
+                            <p>
+                                <span class="ar-text">أن نكون شريك التشغيل الأول للمصانع في منطقة القناة وجمهورية مصر العربية.</span>
+                                <span class="en-text" style="display:none;">To be the first operating partner for factories in the Suez Canal region and Egypt.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="vmv">
+                        <div class="vmv-icon"><i class="fas fa-bullseye"></i></div>
+                        <div>
+                            <h4>
+                                <span class="ar-text">رسالتنا</span>
+                                <span class="en-text" style="display:none;">Our Mission</span>
+                            </h4>
+                            <p>
+                                <span class="ar-text">تقليل خسائر التوقف ورفع استقرار التشغيل من خلال صيانة وقائية حقيقية ونظام تنفيذ منظم.</span>
+                                <span class="en-text" style="display:none;">Reduce downtime losses and raise operational stability through genuine preventive maintenance and an organized execution system.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="vmv">
+                        <div class="vmv-icon"><i class="fas fa-compass"></i></div>
+                        <div>
+                            <h4>
+                                <span class="ar-text">قيمنا</span>
+                                <span class="en-text" style="display:none;">Our Values</span>
+                            </h4>
+                            <p>
+                                <span class="ar-text">الجودة قبل الكمية. الاعتمادية في المواعيد. السلامة فوق الإنتاج. التطوير المستمر. والالتزام بالعقد.</span>
+                                <span class="en-text" style="display:none;">Quality over quantity. Schedule reliability. Safety over output. Continuous improvement. Contract commitment.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline reveal">
+            <h3>
+                <i class="fas fa-clock-rotate-left"></i>
+                <span class="ar-text">رحلتنا حتى الآن</span>
+                <span class="en-text" style="display:none;">Our Journey So Far</span>
+            </h3>
+            <div class="timeline-track">
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2020</div>
+                    <h5>
+                        <span class="ar-text">التأسيس</span>
+                        <span class="en-text" style="display:none;">Founding</span>
+                    </h5>
+                    <p>
+                        <span class="ar-text">بداية الفكرة وتنفيذ أول عقود الصيانة</span>
+                        <span class="en-text" style="display:none;">Idea launch & first maintenance contracts</span>
+                    </p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2021</div>
+                    <h5>
+                        <span class="ar-text">التوسع الأول</span>
+                        <span class="en-text" style="display:none;">Initial Expansion</span>
+                    </h5>
+                    <p>
+                        <span class="ar-text">دخول قطاعات الأغذية والبلاستيك</span>
+                        <span class="en-text" style="display:none;">Entering food & plastics sectors</span>
+                    </p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2022</div>
+                    <h5>
+                        <span class="ar-text">قسم التحكم الآلي</span>
+                        <span class="en-text" style="display:none;">Automation Division</span>
+                    </h5>
+                    <p>
+                        <span class="ar-text">إضافة PLC وSCADA والقياسات الصناعية</span>
+                        <span class="en-text" style="display:none;">Adding PLC, SCADA, industrial measurement</span>
+                    </p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2024</div>
+                    <h5>
+                        <span class="ar-text">عقود تشغيل كاملة</span>
+                        <span class="en-text" style="display:none;">Full Operations Contracts</span>
+                    </h5>
+                    <p>
+                        <span class="ar-text">توقيع أول عقد تشغيل متكامل لمصنع</span>
+                        <span class="en-text" style="display:none;">First full plant operations contract signed</span>
+                    </p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2026</div>
+                    <h5>
+                        <span class="ar-text">المرحلة الحالية</span>
+                        <span class="en-text" style="display:none;">Current Phase</span>
+                    </h5>
+                    <p>
+                        <span class="ar-text">+500 موقع، +5 سنوات خبرة ميدانية</span>
+                        <span class="en-text" style="display:none;">500+ sites, 5+ years field experience</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     WORKFLOW
+     ============================================================ -->
+<section id="workflow">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">منهجيتنا في العمل</span>
+                <span class="en-text" style="display:none;">Our Methodology</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">من <span class="accent">المعاينة</span> إلى <span class="accent">التقارير الدورية</span></span>
+                <span class="en-text" style="display:none;">From <span class="accent">inspection</span> to <span class="accent">periodic reporting</span></span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">منهجية واضحة ومختبرة في كل مشروع. كل خطوة موثقة، وكل مرحلة لها مخرجات محددة.</span>
+                <span class="en-text" style="display:none;">A clear, tested methodology on every project. Every step is documented, and every phase has defined deliverables.</span>
+            </p>
+        </div>
+        <div class="workflow-track">
+            <div class="wf-step reveal">
+                <div class="wf-num">01</div>
+                <h4>
+                    <span class="ar-text">المعاينة</span>
+                    <span class="en-text" style="display:none;">Inspection</span>
+                </h4>
+                <p>
+                    <span class="ar-text">معاينة ميدانية سريعة وتحديد نقاط المخاطر</span>
+                    <span class="en-text" style="display:none;">Quick field inspection & risk identification</span>
+                </p>
+            </div>
+            <div class="wf-step reveal reveal-delay-1">
+                <div class="wf-num">02</div>
+                <h4>
+                    <span class="ar-text">الدراسة الفنية</span>
+                    <span class="en-text" style="display:none;">Technical Study</span>
+                </h4>
+                <p>
+                    <span class="ar-text">تحليل الحالة الراهنة وتحديد الأولويات</span>
+                    <span class="en-text" style="display:none;">Current state analysis & priority setting</span>
+                </p>
+            </div>
+            <div class="wf-step reveal reveal-delay-2">
+                <div class="wf-num">03</div>
+                <h4>
+                    <span class="ar-text">العرض الفني والمالي</span>
+                    <span class="en-text" style="display:none;">Technical & Financial Offer</span>
+                </h4>
+                <p>
+                    <span class="ar-text">عرض واضح بنطاق خدمة مفصل وتسعير شفاف</span>
+                    <span class="en-text" style="display:none;">Clear offer with detailed scope & transparent pricing</span>
+                </p>
+            </div>
+            <div class="wf-step reveal reveal-delay-3">
+                <div class="wf-num">04</div>
+                <h4>
+                    <span class="ar-text">التنفيذ</span>
+                    <span class="en-text" style="display:none;">Execution</span>
+                </h4>
+                <p>
+                    <span class="ar-text">فريق متخصص بأعلى معايير الجودة والسلامة</span>
+                    <span class="en-text" style="display:none;">Specialized team with top quality & safety standards</span>
+                </p>
+            </div>
+            <div class="wf-step reveal reveal-delay-4">
+                <div class="wf-num">05</div>
+                <h4>
+                    <span class="ar-text">المتابعة</span>
+                    <span class="en-text" style="display:none;">Follow-up</span>
+                </h4>
+                <p>
+                    <span class="ar-text">متابعة دورية لما بعد التنفيذ وقياس الأداء</span>
+                    <span class="en-text" style="display:none;">Regular post-execution follow-up & performance tracking</span>
+                </p>
+            </div>
+            <div class="wf-step reveal reveal-delay-4">
+                <div class="wf-num">06</div>
+                <h4>
+                    <span class="ar-text">التقارير الدورية</span>
+                    <span class="en-text" style="display:none;">Periodic Reports</span>
+                </h4>
+                <p>
+                    <span class="ar-text">تقارير فنية دورية لدعم القرار الإداري</span>
+                    <span class="en-text" style="display:none;">Periodic technical reports to support management decisions</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     PLANS — Comparison
+     ============================================================ -->
+<section id="plans" class="bg-soft">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">أنظمة التعاقد</span>
+                <span class="en-text" style="display:none;">Contracting Plans</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">اختر <span class="accent">النظام المناسب</span> لحجم موقعك</span>
+                <span class="en-text" style="display:none;">Choose the <span class="accent">right system</span> for your site size</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">ثلاثة أنظمة مرنة، من زيارات تفقدية بسيطة إلى تشغيل متكامل. التفاصيل النهائية تُحدد بعد المعاينة الفنية.</span>
+                <span class="en-text" style="display:none;">Three flexible systems, from simple inspection visits to fully integrated operations. Final details determined after technical inspection.</span>
+            </p>
+        </div>
+        <div class="plans-wrap">
+            <div class="plan reveal">
+                <div class="plan-icon"><i class="fas fa-clipboard-check"></i></div>
+                <span class="plan-tag">
+                    <span class="ar-text">مرنة</span>
+                    <span class="en-text" style="display:none;">FLEXIBLE</span>
+                </span>
+                <h3>
+                    <span class="ar-text">زيارات تفقدية</span>
+                    <span class="en-text" style="display:none;">Inspection Visits</span>
+                </h3>
+                <p class="plan-desc">
+                    <span class="ar-text">جولات منتظمة للكشف المبكر على المشاكل قبل ما تتحول لأعطال. مناسبة للمواقع اللي عندها فريق داخلي.</span>
+                    <span class="en-text" style="display:none;">Regular rounds for early problem detection before they become failures. Suited for sites with an in-house team.</span>
+                </p>
+                <div class="plan-specs">
+                    <div class="plan-spec"><span class="lbl ar-text">نطاق الخدمة</span><span class="lbl en-text" style="display:none;">Service Scope</span><span class="val ar-text">تفقد + تقرير</span><span class="val en-text" style="display:none;">Inspection + report</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">زمن الاستجابة</span><span class="lbl en-text" style="display:none;">Response</span><span class="val ar-text">48 ساعة</span><span class="val en-text" style="display:none;">48 hours</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">عدد الزيارات</span><span class="lbl en-text" style="display:none;">Visits</span><span class="val ar-text">2-4 / شهر</span><span class="val en-text" style="display:none;">2-4 / month</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">التقارير</span><span class="lbl en-text" style="display:none;">Reports</span><span class="val ar-text">بعد كل زيارة</span><span class="val en-text" style="display:none;">After each visit</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">الدعم الفني</span><span class="lbl en-text" style="display:none;">Support</span><span class="val ar-text">هاتف</span><span class="val en-text" style="display:none;">Phone</span></div>
+                </div>
+                <div class="plan-foot">
+                    <a href="#contact" class="btn btn-outline btn-block">
+                        <span class="ar-text">طلب عرض سعر</span>
+                        <span class="en-text" style="display:none;">Request Quote</span>
+                    </a>
+                    <p class="plan-note ar-text">* السعر حسب حجم الموقع</p>
+                    <p class="plan-note en-text" style="display:none;">* Price based on site size</p>
+                </div>
+            </div>
+
+            <div class="plan plan-featured reveal reveal-delay-1">
+                <div class="plan-badge">
+                    <span class="ar-text">★ الأكثر طلبًا</span>
+                    <span class="en-text" style="display:none;">★ Most Popular</span>
+                </div>
+                <div class="plan-icon"><i class="fas fa-gears"></i></div>
+                <span class="plan-tag">
+                    <span class="ar-text">موصى به</span>
+                    <span class="en-text" style="display:none;">RECOMMENDED</span>
+                </span>
+                <h3>
+                    <span class="ar-text">صيانة شهرية</span>
+                    <span class="en-text" style="display:none;">Monthly Maintenance</span>
+                </h3>
+                <p class="plan-desc">
+                    <span class="ar-text">صيانة وقائية شهرية تضمن استقرار التشغيل وتقلل التوقف. مناسبة لمعظم المصانع متوسطة الحجم.</span>
+                    <span class="en-text" style="display:none;">Monthly preventive maintenance ensuring operational stability. Suited for most mid-size factories.</span>
+                </p>
+                <div class="plan-specs">
+                    <div class="plan-spec"><span class="lbl ar-text">نطاق الخدمة</span><span class="lbl en-text" style="display:none;">Service Scope</span><span class="val ar-text">وقائية شاملة</span><span class="val en-text" style="display:none;">Comprehensive preventive</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">زمن الاستجابة</span><span class="lbl en-text" style="display:none;">Response</span><span class="val ar-text">12 ساعة</span><span class="val en-text" style="display:none;">12 hours</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">عدد الزيارات</span><span class="lbl en-text" style="display:none;">Visits</span><span class="val ar-text">8-12 / شهر</span><span class="val en-text" style="display:none;">8-12 / month</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">التقارير</span><span class="lbl en-text" style="display:none;">Reports</span><span class="val ar-text">شهرية تفصيلية</span><span class="val en-text" style="display:none;">Detailed monthly</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">الدعم الفني</span><span class="lbl en-text" style="display:none;">Support</span><span class="val ar-text">هاتف + طوارئ</span><span class="val en-text" style="display:none;">Phone + emergency</span></div>
+                </div>
+                <div class="plan-foot">
+                    <a href="#contact" class="btn btn-primary btn-block">
+                        <span class="ar-text">احجز معاينة</span>
+                        <span class="en-text" style="display:none;">Book Inspection</span>
+                    </a>
+                    <p class="plan-note ar-text">✦ خصومات على قطع الغيار</p>
+                    <p class="plan-note en-text" style="display:none;">✦ Spare parts discounts</p>
+                </div>
+            </div>
+
+            <div class="plan reveal reveal-delay-2">
+                <div class="plan-icon"><i class="fas fa-building-shield"></i></div>
+                <span class="plan-tag">
+                    <span class="ar-text">مؤسسي</span>
+                    <span class="en-text" style="display:none;">ENTERPRISE</span>
+                </span>
+                <h3>
+                    <span class="ar-text">تشغيل كامل</span>
+                    <span class="en-text" style="display:none;">Full Operations</span>
+                </h3>
+                <p class="plan-desc">
+                    <span class="ar-text">إدارة وتشغيل متكامل لجميع مرافق الموقع بفريق مخصص مقيم. للمواقع الكبيرة والمتعددة.</span>
+                    <span class="en-text" style="display:none;">Integrated management and operation for all site facilities with a dedicated resident team. For large and multi-site operations.</span>
+                </p>
+                <div class="plan-specs">
+                    <div class="plan-spec"><span class="lbl ar-text">نطاق الخدمة</span><span class="lbl en-text" style="display:none;">Service Scope</span><span class="val ar-text">تشغيل متكامل</span><span class="val en-text" style="display:none;">Full operations</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">زمن الاستجابة</span><span class="lbl en-text" style="display:none;">Response</span><span class="val ar-text">فوري 24/7</span><span class="val en-text" style="display:none;">Instant 24/7</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">عدد الزيارات</span><span class="lbl en-text" style="display:none;">Visits</span><span class="val ar-text">فريق مقيم</span><span class="val en-text" style="display:none;">Resident team</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">التقارير</span><span class="lbl en-text" style="display:none;">Reports</span><span class="val ar-text">شهرية + سنوية</span><span class="val en-text" style="display:none;">Monthly + annual</span></div>
+                    <div class="plan-spec"><span class="lbl ar-text">الدعم الفني</span><span class="lbl en-text" style="display:none;">Support</span><span class="val ar-text">فني مقيم + طوارئ</span><span class="val en-text" style="display:none;">Resident tech + emergency</span></div>
+                </div>
+                <div class="plan-foot">
+                    <a href="#contact" class="btn btn-navy btn-block">
+                        <span class="ar-text">تواصل معنا</span>
+                        <span class="en-text" style="display:none;">Contact Us</span>
+                    </a>
+                    <p class="plan-note ar-text">* يُحدد بعد المعاينة والتقييم الشامل</p>
+                    <p class="plan-note en-text" style="display:none;">* Set after inspection & full assessment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+<section id="projects">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">المشاريع المنفذة</span>
+                <span class="en-text" style="display:none;">Recent Projects</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">من <span class="accent">دراسات حالة</span> حقيقية لعملائنا</span>
+                <span class="en-text" style="display:none;">Real <span class="accent">case studies</span> from our clients</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">نماذج مختارة من مشاريعنا المنفذة في قطاعات مختلفة. كل مشروع يحكي قصة تحدٍ صناعي وكيف تغلبنا عليه.</span>
+                <span class="en-text" style="display:none;">Selected samples from our executed projects in different sectors. Every project tells the story of an industrial challenge and how we overcame it.</span>
+            </p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80" alt="Food factory PLC upgrade">
+                    <span class="project-tag ar-text">قطاع الأغذية</span>
+                    <span class="project-tag en-text" style="display:none;">Food Sector</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-meta">
+                        <span><i class="fas fa-industry"></i> <span class="ar-text">مصنع أغذية – القاهرة</span><span class="en-text" style="display:none;">Food factory – Cairo</span></span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                    <h3>
+                        <span class="ar-text">ترقية نظام PLC لخط الإنتاج</span>
+                        <span class="en-text" style="display:none;">PLC upgrade for production line</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">استبدال نظام تحكم قديم بنظام Siemens S7-1500 مع شاشة HMI جديدة وتقليل زمن التوقفات بنسبة كبيرة.</span>
+                        <span class="en-text" style="display:none;">Replacing legacy control with Siemens S7-1500 system and new HMI screen, significantly reducing downtime.</span>
+                    </p>
+                    <div class="project-result">
+                        <strong>−42%</strong>
+                        <span class="ar-text">نسبة توقفات الخط شهريًا</span>
+                        <span class="en-text" style="display:none;">monthly line downtime</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-1">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=900&q=80" alt="Plastic factory">
+                    <span class="project-tag ar-text">قطاع البلاستيك</span>
+                    <span class="project-tag en-text" style="display:none;">Plastics Sector</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-meta">
+                        <span><i class="fas fa-industry"></i> <span class="ar-text">مصنع بلاستيك – العاشر من رمضان</span><span class="en-text" style="display:none;">Plastic factory – 10th of Ramadan</span></span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                    <h3>
+                        <span class="ar-text">عقد صيانة شامل لخطوط البثق</span>
+                        <span class="en-text" style="display:none;">Comprehensive maintenance contract for extrusion lines</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">عقد صيانة وقائية شهرية لـ 6 خطوط بثق، يشمل تنظيف، معايرة، تبديل قطع غيار، وتقارير شهرية للإدارة.</span>
+                        <span class="en-text" style="display:none;">Monthly preventive maintenance contract for 6 extrusion lines including cleaning, calibration, spare parts, and monthly reports.</span>
+                    </p>
+                    <div class="project-result">
+                        <strong>+28%</strong>
+                        <span class="ar-text">ارتفاع كفاءة الخط الإنتاجي</span>
+                        <span class="en-text" style="display:none;">production line efficiency increase</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-2">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80" alt="Warehouse">
+                    <span class="project-tag ar-text">قطاع لوجستي</span>
+                    <span class="project-tag en-text" style="display:none;">Logistics Sector</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-meta">
+                        <span><i class="fas fa-warehouse"></i> <span class="ar-text">مركز لوجستي – السويس</span><span class="en-text" style="display:none;">Logistics center – Suez</span></span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                    <h3>
+                        <span class="ar-text">تشغيل وصيانة مرافق مستودع 12,000 م²</span>
+                        <span class="en-text" style="display:none;">Operations & maintenance of 12,000 m² warehouse</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">تشغيل كامل لأنظمة الكهرباء، الإضاءة، HVAC، وأنظمة السلامة لفريق مقيم 3 فنيين على مدار اليوم.</span>
+                        <span class="en-text" style="display:none;">Full operation of electrical, lighting, HVAC, and safety systems with a 3-technician resident team around the clock.</span>
+                    </p>
+                    <div class="project-result">
+                        <strong>0</strong>
+                        <span class="ar-text">حوادث سلامة خلال 18 شهرًا</span>
+                        <span class="en-text" style="display:none;">safety incidents in 18 months</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     PERFORMANCE DASHBOARD
+     ============================================================ -->
+<section id="performance" class="bg-soft">
+    <div class="container">
+        <div class="section-head left reveal">
+            <span class="eyebrow">
+                <span class="ar-text">مؤشرات الأداء</span>
+                <span class="en-text" style="display:none;">Performance KPIs</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">نتائجنا <span class="accent">تتحدث عنا</span></span>
+                <span class="en-text" style="display:none;">Our results <span class="accent">speak for us</span></span>
+            </h2>
+        </div>
+
+        <div class="dashboard reveal">
+            <div class="dash-head">
+                <div>
+                    <h2>
+                        <span class="ar-text">لوحة مؤشرات الأداء التشغيلية</span>
+                        <span class="en-text" style="display:none;">Operational KPI Dashboard</span>
+                    </h2>
+                    <p>
+                        <span class="ar-text">نتائج مجمعة من جميع العقود النشطة خلال آخر 12 شهرًا</span>
+                        <span class="en-text" style="display:none;">Aggregated results from all active contracts in the last 12 months</span>
+                    </p>
+                </div>
+                <div class="period">
+                    <i class="fas fa-calendar"></i>
+                    <span class="ar-text">آخر 12 شهر</span>
+                    <span class="en-text" style="display:none;">Last 12 months</span>
+                </div>
+            </div>
+            <div class="dash-grid">
+                <div class="dash-card">
+                    <div class="dc-label">
+                        <i class="fas fa-bullseye"></i>
+                        <span class="ar-text">نسبة نجاح الأعمال</span>
+                        <span class="en-text" style="display:none;">Work Success Rate</span>
+                    </div>
+                    <div class="dc-val">
+                        <span class="num" data-counter="98">0</span><span class="suffix">%</span>
+                    </div>
+                    <div class="dc-trend">
+                        <i class="fas fa-arrow-up"></i> <span class="ar-text">+3% عن العام السابق</span><span class="en-text" style="display:none;">+3% YoY</span>
+                    </div>
+                    <div class="dc-bar"><div class="dc-bar-fill" data-pct="98"></div></div>
+                </div>
+                <div class="dash-card">
+                    <div class="dc-label">
+                        <i class="fas fa-calendar-check"></i>
+                        <span class="ar-text">معدل الالتزام بالمواعيد</span>
+                        <span class="en-text" style="display:none;">Schedule Commitment</span>
+                    </div>
+                    <div class="dc-val">
+                        <span class="num" data-counter="97">0</span><span class="suffix">%</span>
+                    </div>
+                    <div class="dc-trend">
+                        <i class="fas fa-arrow-up"></i> <span class="ar-text">+5% عن العام السابق</span><span class="en-text" style="display:none;">+5% YoY</span>
+                    </div>
+                    <div class="dc-bar"><div class="dc-bar-fill" data-pct="97"></div></div>
+                </div>
+                <div class="dash-card">
+                    <div class="dc-label">
+                        <i class="fas fa-bolt"></i>
+                        <span class="ar-text">متوسط زمن الاستجابة</span>
+                        <span class="en-text" style="display:none;">Avg. Response Time</span>
+                    </div>
+                    <div class="dc-val">
+                        <span class="num" data-counter="3.5" data-decimal="1">0</span><span class="suffix ar-text">ساعة</span><span class="suffix en-text" style="display:none;">hrs</span>
+                    </div>
+                    <div class="dc-trend">
+                        <i class="fas fa-arrow-down"></i> <span class="ar-text">−1.2 ساعة عن العام السابق</span><span class="en-text" style="display:none;">−1.2 hrs YoY</span>
+                    </div>
+                    <div class="dc-bar"><div class="dc-bar-fill" data-pct="92"></div></div>
+                </div>
+                <div class="dash-card">
+                    <div class="dc-label">
+                        <i class="fas fa-face-smile"></i>
+                        <span class="ar-text">رضا العملاء</span>
+                        <span class="en-text" style="display:none;">Client Satisfaction</span>
+                    </div>
+                    <div class="dc-val">
+                        <span class="num" data-counter="96">0</span><span class="suffix">%</span>
+                    </div>
+                    <div class="dc-trend">
+                        <i class="fas fa-arrow-up"></i> <span class="ar-text">+4% عن العام السابق</span><span class="en-text" style="display:none;">+4% YoY</span>
+                    </div>
+                    <div class="dc-bar"><div class="dc-bar-fill" data-pct="96"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     REPORTS (preserved)
+     ============================================================ -->
+<section>
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">التقارير والمتابعة</span>
+                <span class="en-text" style="display:none;">Reports & Follow-up</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">تقارير <span class="accent">تساعد الإدارة</span> على اتخاذ القرار</span>
+                <span class="en-text" style="display:none;">Reports that <span class="accent">help management decide</span></span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">نقدّم تقارير دورية مفصلة عن حالة الموقع، المخاطر، التوصيات، وخطط التحسين.</span>
+                <span class="en-text" style="display:none;">We provide detailed periodic reports on site status, risks, recommendations, and improvement plans.</span>
+            </p>
+        </div>
+        <div class="reports-grid">
+            <div class="report-card reveal">
+                <div class="report-icon"><i class="fas fa-clipboard-list"></i></div>
+                <h4>
+                    <span class="ar-text">حالة اللوحات</span>
+                    <span class="en-text" style="display:none;">Panel Status</span>
+                </h4>
+                <p>
+                    <span class="ar-text">تقرير شامل بحالة جميع اللوحات الكهربائية وأنظمة الكنترول في الموقع.</span>
+                    <span class="en-text" style="display:none;">Comprehensive report on all electrical panels and control systems in the site.</span>
+                </p>
+            </div>
+            <div class="report-card reveal reveal-delay-1">
+                <div class="report-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                <h4>
+                    <span class="ar-text">نقاط الخطر</span>
+                    <span class="en-text" style="display:none;">Risk Points</span>
+                </h4>
+                <p>
+                    <span class="ar-text">تحديد دقيق للمناطق التي تحتاج إلى تدخل فوري أو وقائي مع تصنيف الأولوية.</span>
+                    <span class="en-text" style="display:none;">Precise identification of areas requiring immediate or preventive intervention, with priority ranking.</span>
+                </p>
+            </div>
+            <div class="report-card reveal reveal-delay-2">
+                <div class="report-icon"><i class="fas fa-lightbulb"></i></div>
+                <h4>
+                    <span class="ar-text">توصيات فنية</span>
+                    <span class="en-text" style="display:none;">Technical Recommendations</span>
+                </h4>
+                <p>
+                    <span class="ar-text">توصيات مفصلة لتحسين الأداء وتقليل المخاطر، مع تبرير فني وتقدير تكلفة.</span>
+                    <span class="en-text" style="display:none;">Detailed recommendations for performance improvement and risk reduction, with technical justification and cost estimates.</span>
+                </p>
+            </div>
+            <div class="report-card reveal reveal-delay-3">
+                <div class="report-icon"><i class="fas fa-chart-line"></i></div>
+                <h4>
+                    <span class="ar-text">خطة تحسين</span>
+                    <span class="en-text" style="display:none;">Improvement Plan</span>
+                </h4>
+                <p>
+                    <span class="ar-text">خطة زمنية واضحة لتطوير أنظمة التشغيل على المدى القصير والمتوسط.</span>
+                    <span class="en-text" style="display:none;">Clear timeline plan for developing operating systems in the short and medium term.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section id="gallery" class="bg-soft">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">معرض الأعمال</span>
+                <span class="en-text" style="display:none;">Project Gallery</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">لقطات من <span class="accent">أعمالنا الميدانية</span></span>
+                <span class="en-text" style="display:none;">Snapshots from <span class="accent">our field work</span></span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">تنفيذات حقيقية من مواقع عملائنا في قطاعات مختلفة. اضغط على أي صورة لعرضها بالحجم الكامل.</span>
+                <span class="en-text" style="display:none;">Real executions from our clients' sites in different sectors. Click any image to view it full-size.</span>
+            </p>
+        </div>
+        <div class="gallery-filters reveal">
+            <button class="active" data-filter="all">
+                <span class="ar-text">الكل</span>
+                <span class="en-text" style="display:none;">All</span>
+            </button>
+            <button data-filter="electrical">
+                <span class="ar-text">كهرباء</span>
+                <span class="en-text" style="display:none;">Electrical</span>
+            </button>
+            <button data-filter="automation">
+                <span class="ar-text">تحكم آلي</span>
+                <span class="en-text" style="display:none;">Automation</span>
+            </button>
+            <button data-filter="hvac">
+                <span class="ar-text">تكييف</span>
+                <span class="en-text" style="display:none;">HVAC</span>
+            </button>
+            <button data-filter="civil">
+                <span class="ar-text">مقاولات</span>
+                <span class="en-text" style="display:none;">Contracting</span>
+            </button>
+        </div>
+        <div class="gallery-grid reveal" id="gallery-grid">
+            <div class="gallery-item tall" data-cat="electrical">
+                <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=800&q=80" alt="Industrial electrical panel">
+                <div class="gi-caption">
+                    <div class="zoom"><i class="fas fa-expand"></i></div>
+                    <h4>
+                        <span class="ar-text">لوحات كهربائية صناعية</span>
+                        <span class="en-text" style="display:none;">Industrial Electrical Panels</span>
+                    </h4>
+                    <p>
+                        <span class="ar-text">تركيب وتنظيم لوحات باور وكنترول</span>
+                        <span class="en-text" style="display:none;">Power & control panel installation</span>
+                    </p>
+                </div>
+            </div>
+            <div class="gallery-item wide" data-cat="automation">
+                <img src="https://images.unsplash.com/photo-1581091870622-1c5b7a5e6bcb?auto=format&fit=crop&w=1200&q=80" alt="PLC system">
+                <div class="gi-caption">
+                    <div class="zoom"><i class="fas fa-expand"></i></div>
+                    <h4>
+                        <span class="ar-text">أنظمة PLC والكنترول</span>
+                        <span class="en-text" style="display:none;">PLC & Control Systems</span>
+                    </h4>
+                    <p>
+                        <span class="ar-text">برمجة Siemens S7-1500 وشاشات HMI</span>
+                        <span class="en-text" style="display:none;">Siemens S7-1500 & HMI programming</span>
+                    </p>
+                </div>
+            </div>
+            <div class="gallery-item" data-cat="hvac">
+                <img src="https://images.unsplash.com/photo-1631545308456-c4f9c5de9cda?auto=format&fit=crop&w=600&q=80" alt="HVAC">
+                <div class="gi-caption">
+                    <div class="zoom"><i class="fas fa-expand"></i></div>
+                    <h4>
+                        <span class="ar-text">تكييف صناعي</span>
+                        <span class="en-text" style="display:none;">Industrial HVAC</span>
+                    </h4>
+                </div>
+            </div>
+            <div class="gallery-item" data-cat="electrical">
+                <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=600&q=80" alt="Industrial maintenance">
+                <div class="gi-caption">
+                    <div class="zoom"><i class="fas fa-expand"></i></div>
+                    <h4>
+                        <span class="ar-text">صيانة كهربائية شاملة</span>
+                        <span class="en-text" style="display:none;">Comprehensive Electrical Service</span>
+                    </h4>
+                </div>
+            </div>
+            <div class="gallery-item tall" data-cat="civil">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Construction">
+                <div class="gi-caption">
+                    <div class="zoom"><i class="fas fa-expand"></i></div>
+                    <h4>
+                        <span class="ar-text">تجهيز مواقع إنتاج</span>
+                        <span class="en-text" style="display:none;">Production Site Setup</span>
+                    </h4>
+                </div>
+            </div>
+            <div class="gallery-item" data-cat="hvac">
+                <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?auto=format&fit=crop&w=600&q=80" alt="HVAC install">
+                <div class="gi-caption">
+                    <div class="zoom"><i class="fas fa-expand"></i></div>
+                    <h4>
+                        <span class="ar-text">تركيب HVAC</span>
+                        <span class="en-text" style="display:none;">HVAC Installation</span>
+                    </h4>
+                </div>
+            </div>
+            <div class="gallery-item wide" data-cat="automation">
+                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80" alt="Control room">
+                <div class="gi-caption">
+                    <div class="zoom"><i class="fas fa-expand"></i></div>
+                    <h4>
+                        <span class="ar-text">غرف تحكم صناعية</span>
+                        <span class="en-text" style="display:none;">Industrial Control Rooms</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-cap"></div>
+</div>
+
+<!-- ============================================================
+     TESTIMONIALS / TRUST
+     ============================================================ -->
+<section id="testimonials">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">شهادات العملاء</span>
+                <span class="en-text" style="display:none;">Client Testimonials</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">ماذا يقول <span class="accent">عملاؤنا</span> عنا</span>
+                <span class="en-text" style="display:none;">What our <span class="accent">clients say</span> about us</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">نتائجنا وثقتنا في التعامل تتحدث من خلال العملاء الذين وثقوا بنا.</span>
+                <span class="en-text" style="display:none;">Our results and the trust we earn speak through the clients who placed their confidence in us.</span>
+            </p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial reveal">
+                <div class="quote-mark">"</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <blockquote>
+                    <span class="ar-text">"فريق كاتو التزم بخطة الصيانة بدقة، والتقارير الشهرية ساعدتنا نتحكم في تكاليف التشغيل بشكل ملحوظ. أنصح بالتعامل معهم لأي مصنع."</span>
+                    <span class="en-text" style="display:none;">"KATO's team committed to the maintenance plan precisely, and the monthly reports helped us control operating costs noticeably. I recommend them for any factory."</span>
+                </blockquote>
+                <div class="t-foot">
+                    <div class="t-avatar">م.أ</div>
+                    <div class="t-meta">
+                        <h5>
+                            <span class="ar-text">م. أحمد فؤاد</span>
+                            <span class="en-text" style="display:none;">Eng. Ahmed Fouad</span>
+                        </h5>
+                        <p>
+                            <span class="ar-text">مدير مصنع – قطاع البلاستيك</span>
+                            <span class="en-text" style="display:none;">Factory Manager – Plastics</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial reveal reveal-delay-1">
+                <div class="quote-mark">"</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <blockquote>
+                    <span class="ar-text">"استجابة سريعة جدًا للطوارئ. مرة واحدة اتصلنا في الساعة 3 الفجر وكان عندنا فني في الموقع خلال ساعتين. ده غير معتاد في السوق."</span>
+                    <span class="en-text" style="display:none;">"Very fast emergency response. Once we called at 3 AM and had a technician on site within 2 hours. That's unusual in the market."</span>
+                </blockquote>
+                <div class="t-foot">
+                    <div class="t-avatar">م.س</div>
+                    <div class="t-meta">
+                        <h5>
+                            <span class="ar-text">م. سامي رضوان</span>
+                            <span class="en-text" style="display:none;">Eng. Sami Radwan</span>
+                        </h5>
+                        <p>
+                            <span class="ar-text">مدير صيانة – قطاع الأغذية</span>
+                            <span class="en-text" style="display:none;">Maintenance Manager – Food</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial reveal reveal-delay-2">
+                <div class="quote-mark">"</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <blockquote>
+                    <span class="ar-text">"التعامل مع كاتو منظم من البداية للنهاية. من المعاينة الأولى للتقرير النهائي، كل حاجة موثقة واحترافية. ده اللي كنا محتاجينه فعلاً."</span>
+                    <span class="en-text" style="display:none;">"Working with KATO is organized from start to finish. From the first inspection to the final report, everything is documented and professional. That's exactly what we needed."</span>
+                </blockquote>
+                <div class="t-foot">
+                    <div class="t-avatar">أ.خ</div>
+                    <div class="t-meta">
+                        <h5>
+                            <span class="ar-text">أ. خالد مصطفي</span>
+                            <span class="en-text" style="display:none;">Mr. Khaled Mostafa</span>
+                        </h5>
+                        <p>
+                            <span class="ar-text">مالك مصنع – قطاع الكيماويات</span>
+                            <span class="en-text" style="display:none;">Factory Owner – Chemicals</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact" class="bg-soft">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">
+                <span class="ar-text">تواصل معنا</span>
+                <span class="en-text" style="display:none;">Get in Touch</span>
+            </span>
+            <h2 class="section-title">
+                <span class="ar-text">احجز <span class="accent">معاينة مجانية</span> لموقعك</span>
+                <span class="en-text" style="display:none;">Book a <span class="accent">free inspection</span> for your site</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="ar-text">سيب بياناتك في النموذج أو تواصل معنا مباشرة عبر القنوات المتاحة. فريقنا هيتواصل معاك خلال 24 ساعة لتحديد موعد المعاينة.</span>
+                <span class="en-text" style="display:none;">Leave your details in the form or contact us directly. Our team will reach out within 24 hours to schedule the inspection.</span>
+            </p>
+        </div>
+        <div class="contact-wrap">
+            <div class="contact-info reveal">
+                <h2>
+                    <span class="ar-text">بيانات التواصل</span>
+                    <span class="en-text" style="display:none;">Contact Information</span>
+                </h2>
+                <p>
+                    <span class="ar-text">متاحون على مدار الساعة للطوارئ. للحجز والاستفسار استخدم القنوات التالية.</span>
+                    <span class="en-text" style="display:none;">Available 24/7 for emergencies. Use the channels below for booking and inquiries.</span>
+                </p>
+                <div class="contact-methods">
+                    <a href="tel:01028644675" class="cm">
+                        <div class="cm-icon call"><i class="fas fa-phone"></i></div>
+                        <div class="cm-body">
+                            <h5>
+                                <span class="ar-text">الخط الرئيسي</span>
+                                <span class="en-text" style="display:none;">Main Line</span>
+                            </h5>
+                            <p>01028644675</p>
+                        </div>
+                    </a>
+                    <a href="tel:01124271997" class="cm">
+                        <div class="cm-icon call"><i class="fas fa-phone"></i></div>
+                        <div class="cm-body">
+                            <h5>
+                                <span class="ar-text">خط إضافي</span>
+                                <span class="en-text" style="display:none;">Additional Line</span>
+                            </h5>
+                            <p>01124271997</p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/201028644675" target="_blank" class="cm">
+                        <div class="cm-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+                        <div class="cm-body">
+                            <h5>
+                                <span class="ar-text">واتساب مباشر</span>
+                                <span class="en-text" style="display:none;">Direct WhatsApp</span>
+                            </h5>
+                            <p>
+                                <span class="ar-text">تواصل الآن</span>
+                                <span class="en-text" style="display:none;">Contact Now</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="mailto:katto100100@gmail.com" class="cm">
+                        <div class="cm-icon email"><i class="fas fa-envelope"></i></div>
+                        <div class="cm-body">
+                            <h5>
+                                <span class="ar-text">البريد الإلكتروني</span>
+                                <span class="en-text" style="display:none;">Email</span>
+                            </h5>
+                            <p>katto100100@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61578658141960" target="_blank" class="cm">
+                        <div class="cm-icon fb"><i class="fab fa-facebook-f"></i></div>
+                        <div class="cm-body">
+                            <h5>
+                                <span class="ar-text">فيسبوك</span>
+                                <span class="en-text" style="display:none;">Facebook</span>
+                            </h5>
+                            <p>كاتو – KATO</p>
+                        </div>
+                    </a>
+                    <div class="cm" style="cursor:default;">
+                        <div class="cm-icon loc"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="cm-body">
+                            <h5>
+                                <span class="ar-text">العنوان</span>
+                                <span class="en-text" style="display:none;">Address</span>
+                            </h5>
+                            <p style="font-size:13px;line-height:1.6;">
+                                <span class="ar-text">السويس – السلام 1 – شارع عثمان<br>بجوار مسجد سعد ابن أبي وقاص</span>
+                                <span class="en-text" style="display:none;">Suez – El Salam 1 – Othman Street<br>Next to Saad Ibn Abi Waqqas Mosque</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form reveal reveal-delay-1">
+                <h3>
+                    <span class="ar-text">نموذج الحجز الرسمي</span>
+                    <span class="en-text" style="display:none;">Official Booking Form</span>
+                </h3>
+                <p>
+                    <span class="ar-text">سيب بياناتك بالتفصيل وهنتواصل معاك خلال 24 ساعة.</span>
+                    <span class="en-text" style="display:none;">Leave your details and we'll get back to you within 24 hours.</span>
+                </p>
+                <form id="contactForm" novalidate>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label>
+                                <span class="ar-text">اسم الشركة / المصنع</span>
+                                <span class="en-text" style="display:none;">Company / Factory Name</span>
+                                <span class="req">*</span>
+                            </label>
+                            <input type="text" name="company" required>
+                            <span class="err">
+                                <span class="ar-text">من فضلك ادخل اسم الشركة</span>
+                                <span class="en-text" style="display:none;">Please enter company name</span>
+                            </span>
+                        </div>
+                        <div class="form-field">
+                            <label>
+                                <span class="ar-text">المسؤول / الاسم الكامل</span>
+                                <span class="en-text" style="display:none;">Contact Person</span>
+                                <span class="req">*</span>
+                            </label>
+                            <input type="text" name="name" required>
+                            <span class="err">
+                                <span class="ar-text">من فضلك ادخل اسمك</span>
+                                <span class="en-text" style="display:none;">Please enter your name</span>
+                            </span>
+                        </div>
+                        <div class="form-field">
+                            <label>
+                                <span class="ar-text">رقم الهاتف</span>
+                                <span class="en-text" style="display:none;">Phone Number</span>
+                                <span class="req">*</span>
+                            </label>
+                            <input type="tel" name="phone" required pattern="[0-9+\-\s]{8,}">
+                            <span class="err">
+                                <span class="ar-text">رقم هاتف غير صالح</span>
+                                <span class="en-text" style="display:none;">Invalid phone number</span>
+                            </span>
+                        </div>
+                        <div class="form-field">
+                            <label>
+                                <span class="ar-text">البريد الإلكتروني</span>
+                                <span class="en-text" style="display:none;">Email</span>
+                            </label>
+                            <input type="email" name="email">
+                            <span class="err">
+                                <span class="ar-text">بريد إلكتروني غير صالح</span>
+                                <span class="en-text" style="display:none;">Invalid email</span>
+                            </span>
+                        </div>
+                        <div class="form-field">
+                            <label>
+                                <span class="ar-text">نوع النشاط</span>
+                                <span class="en-text" style="display:none;">Business Type</span>
+                                <span class="req">*</span>
+                            </label>
+                            <select name="sector" required data-bilingual>
+                                <option value="" data-ar="اختر القطاع" data-en="Select sector"></option>
+                                <option value="food" data-ar="مصانع الأغذية" data-en="Food & Beverage"></option>
+                                <option value="pharma" data-ar="مصانع الأدوية" data-en="Pharmaceutical"></option>
+                                <option value="plastic" data-ar="مصانع البلاستيك" data-en="Plastics"></option>
+                                <option value="chemical" data-ar="مصانع الكيماويات" data-en="Chemicals"></option>
+                                <option value="metal" data-ar="مصانع معدنية" data-en="Metals"></option>
+                                <option value="warehouse" data-ar="مخازن ولوجستيات" data-en="Warehousing & Logistics"></option>
+                                <option value="other" data-ar="أخرى" data-en="Other"></option>
+                            </select>
+                            <span class="err">
+                                <span class="ar-text">من فضلك اختر القطاع</span>
+                                <span class="en-text" style="display:none;">Please select a sector</span>
+                            </span>
+                        </div>
+                        <div class="form-field">
+                            <label>
+                                <span class="ar-text">عدد المواقع</span>
+                                <span class="en-text" style="display:none;">Number of Sites</span>
+                            </label>
+                            <select name="sites">
+                                <option value="1">1</option>
+                                <option value="2-3">2-3</option>
+                                <option value="4-5">4-5</option>
+                                <option value="5+">5+</option>
+                            </select>
+                        </div>
+                        <div class="form-field full">
+                            <label>
+                                <span class="ar-text">نوع الخدمة المطلوبة</span>
+                                <span class="en-text" style="display:none;">Service Required</span>
+                                <span class="req">*</span>
+                            </label>
+                            <select name="service" required data-bilingual>
+                                <option value="" data-ar="اختر الخدمة" data-en="Select service"></option>
+                                <option value="electrical" data-ar="كهرباء وكنترول صناعي" data-en="Industrial Electrical & Control"></option>
+                                <option value="plc" data-ar="أنظمة PLC والتحكم الآلي" data-en="PLC & Automation Systems"></option>
+                                <option value="hvac" data-ar="التكييف الصناعي" data-en="Industrial HVAC"></option>
+                                <option value="water" data-ar="الفلاتر وأنظمة المياه" data-en="Filters & Water Systems"></option>
+                                <option value="plumbing" data-ar="السباكة الصناعية" data-en="Industrial Plumbing"></option>
+                                <option value="contracting" data-ar="المقاولات والتشطيبات" data-en="Contracting & Finishing"></option>
+                                <option value="monthly" data-ar="عقد صيانة شهرية" data-en="Monthly Maintenance Contract"></option>
+                                <option value="full" data-ar="تشغيل كامل" data-en="Full Operations Contract"></option>
+                                <option value="other" data-ar="أخرى" data-en="Other"></option>
+                            </select>
+                            <span class="err">
+                                <span class="ar-text">من فضلك اختر الخدمة</span>
+                                <span class="en-text" style="display:none;">Please select a service</span>
+                            </span>
+                        </div>
+                        <div class="form-field full">
+                            <label>
+                                <span class="ar-text">وصف الموقع / الخدمة المطلوبة</span>
+                                <span class="en-text" style="display:none;">Site / Service Description</span>
+                            </label>
+                            <textarea name="details" rows="4" placeholder="...اكتب وصف مختصر"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">
+                            <span class="btn-text">
+                                <i class="fab fa-whatsapp"></i>
+                                <span class="ar-text">إرسال عبر واتساب</span>
+                                <span class="en-text" style="display:none;">Send via WhatsApp</span>
+                            </span>
+                            <span class="btn-loader"><span class="spinner"></span> <span class="ar-text">جاري الإرسال...</span><span class="en-text" style="display:none;">Sending...</span></span>
+                        </button>
+                    </div>
+                </form>
+                <div class="form-success" id="form-success">
+                    <i class="fas fa-circle-check"></i>
+                    <h4>
+                        <span class="ar-text">تم إرسال طلبك بنجاح</span>
+                        <span class="en-text" style="display:none;">Request sent successfully</span>
+                    </h4>
+                    <p>
+                        <span class="ar-text">شكرًا لتواصلك مع كاتو. فريقنا هيتواصل معاك خلال 24 ساعة.</span>
+                        <span class="en-text" style="display:none;">Thanks for reaching out. Our team will contact you within 24 hours.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 <footer>
-  <div class="container">
-    <div class="newsletter reveal">
-      <div class="newsletter-text">
-        <h3>اشترك في نشرتنا البريدية</h3>
-        <p>احصل على أحدث العروض والخصومات الحصرية مباشرة في بريدك</p>
-      </div>
-      <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('input').value='';this.querySelector('.nl-msg').textContent='تم الاشتراك بنجاح! ✓';">
-        <input type="email" placeholder="بريدك الإلكتروني" required>
-        <button type="submit">اشترك</button>
-        <span class="nl-msg"></span>
-      </form>
-    </div>
-
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="logo">
-          <span class="logo-mark">R</span>
-          <span class="logo-text">
-            <span class="al" style="color:white">الـ</span><span class="rayyan">ريان</span>
-          </span>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <div class="logo-mark"><i class="fas fa-cog"></i></div>
+                    <div class="logo-text">
+                        <span class="name">KATO</span>
+                        <span class="tag ar-text">كفاءة · إدارة · تنفيذ · وقت</span>
+                        <span class="tag en-text" style="display:none;">EFFICIENCY · MGMT · EXECUTION · TIME</span>
+                    </div>
+                </a>
+                <p>
+                    <span class="ar-text">مركز صيانة ومقاولات متكامل للمصانع والشركات في مصر. نقلل توقف الإنتاج ونرفع كفاءة تشغيلك من خلال فرق متخصصة وتقارير فنية موثوقة.</span>
+                    <span class="en-text" style="display:none;">An integrated maintenance and contracting center for factories and companies in Egypt. We reduce production downtime and raise your operational efficiency through specialized teams and reliable technical reports.</span>
+                </p>
+                <div class="footer-socials">
+                    <a href="https://wa.me/201028644675" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61578658141960" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:katto100100@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:01028644675" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5>
+                    <span class="ar-text">روابط سريعة</span>
+                    <span class="en-text" style="display:none;">Quick Links</span>
+                </h5>
+                <ul class="footer-links">
+                    <li><a href="#industries"><span class="ar-text">القطاعات</span><span class="en-text" style="display:none;">Industries</span></a></li>
+                    <li><a href="#services"><span class="ar-text">الخدمات</span><span class="en-text" style="display:none;">Services</span></a></li>
+                    <li><a href="#about"><span class="ar-text">من نحن</span><span class="en-text" style="display:none;">About</span></a></li>
+                    <li><a href="#workflow"><span class="ar-text">منهجيتنا</span><span class="en-text" style="display:none;">Methodology</span></a></li>
+                    <li><a href="#projects"><span class="ar-text">المشاريع</span><span class="en-text" style="display:none;">Projects</span></a></li>
+                    <li><a href="#plans"><span class="ar-text">العقود</span><span class="en-text" style="display:none;">Plans</span></a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>
+                    <span class="ar-text">الخدمات</span>
+                    <span class="en-text" style="display:none;">Services</span>
+                </h5>
+                <ul class="footer-links">
+                    <li><a href="#services"><span class="ar-text">كهرباء وكنترول</span><span class="en-text" style="display:none;">Electrical & Control</span></a></li>
+                    <li><a href="#services"><span class="ar-text">أنظمة PLC</span><span class="en-text" style="display:none;">PLC Systems</span></a></li>
+                    <li><a href="#services"><span class="ar-text">التكييف الصناعي</span><span class="en-text" style="display:none;">Industrial HVAC</span></a></li>
+                    <li><a href="#services"><span class="ar-text">الفلاتر وأنظمة المياه</span><span class="en-text" style="display:none;">Filters & Water</span></a></li>
+                    <li><a href="#services"><span class="ar-text">السباكة الصناعية</span><span class="en-text" style="display:none;">Industrial Plumbing</span></a></li>
+                    <li><a href="#services"><span class="ar-text">مقاولات وتشطيبات</span><span class="en-text" style="display:none;">Contracting</span></a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>
+                    <span class="ar-text">تواصل معنا</span>
+                    <span class="en-text" style="display:none;">Contact</span>
+                </h5>
+                <div class="footer-contact-line">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <div>01028644675</div>
+                        <div>01124271997</div>
+                    </div>
+                </div>
+                <div class="footer-contact-line">
+                    <i class="fas fa-envelope"></i>
+                    <div>katto100100@gmail.com</div>
+                </div>
+                <div class="footer-contact-line">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span class="ar-text">السويس – السلام 1 – شارع عثمان<br>بجوار مسجد سعد ابن أبي وقاص</span>
+                        <span class="en-text" style="display:none;">Suez – El Salam 1 – Othman St.<br>Next to Saad Ibn Abi Waqqas Mosque</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>متجر الريان هو وجهتكم الأولى للتسوق الإلكتروني في السعودية والخليج. نجمع بين الجودة العالية والتصاميم العصرية لنقدم تجربة استثنائية لا تُنسى.</p>
-        <div class="socials">
-          <a href="#" class="social-link" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link" aria-label="تويتر"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" class="social-link" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-link" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
-          <a href="https://wa.me/201068300432" target="_blank" rel="noopener" class="social-link" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+        <div class="footer-bottom">
+            <p>© 2026 <strong>KATO</strong>. <span class="ar-text">جميع الحقوق محفوظة.</span><span class="en-text" style="display:none;">All Rights Reserved.</span></p>
+            <div class="legal">
+                <span class="ar-text">كفاءة · إدارة · تنفيذ · وقت</span>
+                <span class="en-text" style="display:none;">Efficiency · Management · Execution · Time</span>
+            </div>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>روابط سريعة</h4>
-        <ul class="footer-links">
-          <li><a href="#" onclick="resetApp()"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
-          <li><a href="#" onclick="scrollToSec('products')"><i class="fas fa-chevron-left"></i> المنتجات</a></li>
-          <li><a href="#" onclick="scrollToSec('categories')"><i class="fas fa-chevron-left"></i> الأقسام</a></li>
-          <li><a href="#" onclick="scrollToSec('deals')"><i class="fas fa-chevron-left"></i> العروض</a></li>
-          <li><a href="#" onclick="scrollToSec('bestsellers')"><i class="fas fa-chevron-left"></i> الأكثر مبيعاً</a></li>
-          <li><a href="#" onclick="scrollToSec('about')"><i class="fas fa-chevron-left"></i> من نحن</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>خدمة العملاء</h4>
-        <ul class="footer-links">
-          <li><a href="#" onclick="scrollToSec('contact')"><i class="fas fa-chevron-left"></i> تواصل معنا</a></li>
-          <li><a href="#" onclick="scrollToSec('faq')"><i class="fas fa-chevron-left"></i> الأسئلة الشائعة</a></li>
-          <li><a href="#" onclick="scrollToSec('policies')"><i class="fas fa-chevron-left"></i> سياساتنا</a></li>
-          <li><a href="#" onclick="scrollToSec('reviews')"><i class="fas fa-chevron-left"></i> آراء العملاء</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>تواصل معنا</h4>
-        <ul class="contact-links">
-          <li><i class="fas fa-location-dot"></i> الرياض، المملكة العربية السعودية</li>
-          <li><i class="fas fa-phone"></i> <a href="tel:+966500000000">+966 50 000 0000</a></li>
-          <li><i class="fas fa-envelope"></i> <a href="mailto:info@alrayyan.com">info@alrayyan.com</a></li>
-          <li><i class="fab fa-whatsapp"></i> متاح 24/7 عبر واتساب</li>
-        </ul>
-        <div class="payment-icons" aria-label="طرق الدفع">
-          <span class="pay-icon">VISA</span>
-          <span class="pay-icon">MASTERCARD</span>
-          <span class="pay-icon">MADA</span>
-          <span class="pay-icon">APPLE</span>
-          <span class="pay-icon">STC</span>
-        </div>
-      </div>
     </div>
-
-    <div class="footer-bottom">
-      <span>جميع الحقوق محفوظة لمتجر الريان © 2026</span>
-      <div class="footer-bottom-links">
-        <a href="#">سياسة الخصوصية</a>
-        <a href="#">الشروط والأحكام</a>
-        <a href="#">سياسة الكوكيز</a>
-      </div>
-    </div>
-  </div>
 </footer>
 
-<!-- WhatsApp FAB -->
-<a href="https://wa.me/201068300432" target="_blank" rel="noopener" class="whatsapp-fab" title="تواصل عبر واتساب" aria-label="تواصل عبر واتساب">
-  <i class="fab fa-whatsapp"></i>
-  <span class="fab-pulse" aria-hidden="true"></span>
-</a>
+<!-- ============================================================
+     FLOATING ACTIONS
+     ============================================================ -->
+<div class="floating">
+    <a href="https://wa.me/201028644675" target="_blank" class="float wa" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tip">
+            <span class="ar-text">تواصل عبر واتساب</span>
+            <span class="en-text" style="display:none;">Chat on WhatsApp</span>
+        </span>
+    </a>
+    <a href="tel:01028644675" class="float ph" aria-label="Call">
+        <i class="fas fa-phone"></i>
+        <span class="tip">
+            <span class="ar-text">اتصل بنا الآن</span>
+            <span class="en-text" style="display:none;">Call us now</span>
+        </span>
+    </a>
+</div>
 
-<!-- Back to top -->
-<button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="العودة للأعلى">
-  <i class="fas fa-chevron-up"></i>
-</button>
-
-<script src="script.js" defer></script>
+<script src="script.js"></script>
 </body>
 </html>
