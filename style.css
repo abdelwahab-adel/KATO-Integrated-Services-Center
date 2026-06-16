@@ -2188,7 +2188,7 @@
             section { padding: 70px 0; }
             .nav { display: none; }
             .nav-cta { display: none; }
-            .header-lang { display: none; }
+            .header-lang { display:block ; }
             .menu-toggle { display: inline-flex; }
             .services-wrap { grid-template-columns: 1fr; }
             .about-inner { grid-template-columns: 1fr; gap: 40px; }
